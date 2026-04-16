@@ -63,14 +63,23 @@ class RetrievalConfig(BaseModel):
 
 
 class IngestConfig(BaseModel):
+    # PubMed
     mesh_terms: list[str] = Field(default_factory=list)
     max_per_term: int = 100
     date_range_start: int = 2010
+    entrez_email: str = ""
+    entrez_api_key: str = ""
+
+    # ClinicalTrials.gov v2
+    ct_conditions: list[str] = Field(default_factory=list)
+    ct_statuses: list[str] = Field(default_factory=list)
+    ct_max_per_condition: int = 100
+    ct_start_date_from: int | None = None
+
+    # Chunking (shared across sources)
     chunk_size: int = 200
     overlap: int = 50
     separator: str = "."
-    entrez_email: str = ""
-    entrez_api_key: str = ""
 
 
 class EvaluationConfig(BaseModel):
@@ -135,13 +144,22 @@ def load_config(config_dir: Path | None = None) -> AppConfig:
 
 
 def _merge_ingest(raw: dict[str, Any]) -> dict[str, Any]:
-    """The ingest.yaml has pubmed.mesh_terms nested; flatten to IngestConfig fields."""
+    """ingest.yaml has per-source sub-sections (pubmed, clinical_trials, chunking);
+    flatten to the IngestConfig fields used by loaders."""
     pubmed = raw.get("pubmed", {})
+    ct = raw.get("clinical_trials", {})
     chunking = raw.get("chunking", {})
     return {
+        # PubMed
         "mesh_terms": pubmed.get("mesh_terms", []),
         "max_per_term": pubmed.get("max_per_term", 100),
         "date_range_start": pubmed.get("date_range_start", 2010),
+        # ClinicalTrials.gov
+        "ct_conditions": ct.get("conditions", []),
+        "ct_statuses": ct.get("statuses", []),
+        "ct_max_per_condition": ct.get("max_per_condition", 100),
+        "ct_start_date_from": ct.get("start_date_from"),
+        # Chunking
         "chunk_size": chunking.get("chunk_size", 200),
         "overlap": chunking.get("overlap", 50),
         "separator": chunking.get("separator", "."),
