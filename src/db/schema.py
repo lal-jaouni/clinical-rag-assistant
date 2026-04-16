@@ -15,9 +15,9 @@ from sqlalchemy import (
     JSON,
     Boolean,
     DateTime,
+    Float,
     ForeignKey,
     Integer,
-    Real,
     String,
     Text,
     UniqueConstraint,
@@ -89,7 +89,7 @@ class EvalLog(Base):
     retrieved_ids: Mapped[list[int]] = mapped_column(ARRAY(Integer), nullable=False)
     answer: Mapped[str | None] = mapped_column(Text)
     cited_sources: Mapped[list[str] | None] = mapped_column(ARRAY(String))
-    confidence: Mapped[float | None] = mapped_column(Real)
+    confidence: Mapped[float | None] = mapped_column(Float)
     hallucination: Mapped[bool | None] = mapped_column(Boolean)
     latency_ms: Mapped[int | None] = mapped_column(Integer)
     llm_provider: Mapped[str | None] = mapped_column(String)

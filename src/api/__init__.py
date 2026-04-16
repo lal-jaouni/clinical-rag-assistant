@@ -1,5 +1,1 @@
-"""API and UI for clinical RAG."""
-
-from src.api.app import create_app
-
-__all__ = ["create_app"]
+"""FastAPI endpoints + Streamlit UI."""
