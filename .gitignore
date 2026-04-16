@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+.env
+dist/
+build/
+*.parquet
+data/raw/
+data/processed/
+mlruns/
+.ipynb_checkpoints/
+*.db
