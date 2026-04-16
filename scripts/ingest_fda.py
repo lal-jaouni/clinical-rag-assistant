@@ -19,7 +19,6 @@ from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
-from sqlalchemy import func
 from sqlalchemy.exc import IntegrityError
 
 # Load env and add src to path
@@ -238,18 +237,23 @@ def verify_ingestion() -> None:
         print(f"FDA documents in DB: {fda_docs}")
         print(f"FDA chunks in DB:    {fda_chunks}")
 
-        doc_types = (
-            session.query(
-                Document.meta["doc_type"].as_string(), func.count(Document.id)
-            )
+        # doc_type distribution -- aggregated in Python to sidestep a Postgres
+        # quirk where two separate CAST(metadata ->> 'doc_type' AS VARCHAR)
+        # expressions emitted by SQLAlchemy's ORM are treated as non-equal in
+        # the GROUP BY clause (GroupingError).
+        meta_rows = (
+            session.query(Document.meta)
             .filter(Document.source_type == SOURCE_TYPE)
-            .group_by(Document.meta["doc_type"].as_string())
             .all()
         )
-        if doc_types:
+        dtype_counts: dict[str, int] = {}
+        for (meta,) in meta_rows:
+            dtype = (meta or {}).get("doc_type") or ""
+            dtype_counts[dtype] = dtype_counts.get(dtype, 0) + 1
+        if dtype_counts:
             print()
             print("By doc_type:")
-            for dtype, count in doc_types:
+            for dtype, count in sorted(dtype_counts.items(), key=lambda kv: -kv[1]):
                 print(f"  {dtype or '(blank)'}: {count}")
 
     finally:

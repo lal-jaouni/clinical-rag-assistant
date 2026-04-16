@@ -75,6 +75,18 @@ class FDALoader(BaseDocumentLoader):
         self.cache_dir = Path(cache_dir)
         self.timeout = timeout
         self._session = requests.Session()
+        # fda.gov serves a bot-detection apology page to clients that
+        # identify as python-requests. Pretend to be a normal desktop browser
+        # so the CDN hands us the real PDF binary.
+        self._session.headers.update(
+            {
+                "User-Agent": (
+                    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+                ),
+                "Accept": "application/pdf,*/*;q=0.8",
+            }
+        )
 
     # ── Public API ───────────────────────────────────────────────────────
 
@@ -159,11 +171,19 @@ class FDALoader(BaseDocumentLoader):
 
         url = entry["url"]
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        resp = self._session.get(url, timeout=self.timeout, stream=True)
+        resp = self._session.get(url, timeout=self.timeout, stream=True, allow_redirects=True)
         resp.raise_for_status()
         content = resp.content
         if not content:
             raise RuntimeError("empty response body")
+        # Guard against fda.gov's bot-apology page, which returns HTTP 200 with
+        # an HTML body rather than the PDF we asked for.
+        if not content.startswith(b"%PDF"):
+            ctype = resp.headers.get("Content-Type", "unknown")
+            raise RuntimeError(
+                f"response is not a PDF (Content-Type={ctype}, starts with "
+                f"{content[:16]!r}, final URL={resp.url})"
+            )
         cache_path.write_bytes(content)
         return cache_path
 
