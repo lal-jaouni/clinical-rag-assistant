@@ -20,12 +20,27 @@ fda:
   cache_dir: "/tmp/fda_cache"
 
 clinical_trials:
-  domains:
-    - "Emergency Medicine"
-    - "Hematology"
-    - "Transfusion"
-  status: "recruiting"
-  max_results: 500
+  # CT.gov v2 API condition queries. These are matched via query.cond=, which
+  # searches the conditions, keywords, and title fields. Narrower than the
+  # PubMed MeSH set because CT.gov tags are more heterogeneous and a broad MeSH
+  # term often pulls unrelated trials.
+  conditions:
+    - "massive transfusion"
+    - "hemorrhagic shock"
+    - "damage control resuscitation"
+    - "tranexamic acid trauma"
+    - "trauma hemorrhage"
+  # Per-condition result cap. v2 API default pageSize is 10; we paginate.
+  max_per_condition: 100
+  # Trial status filter passed to filter.overallStatus. Empty list = all statuses.
+  # Completed + active trials are most useful for evidence synthesis; recruiting
+  # trials give forward-looking protocols.
+  statuses:
+    - "COMPLETED"
+    - "ACTIVE_NOT_RECRUITING"
+    - "RECRUITING"
+  # Minimum start year. Set to null for no lower bound.
+  start_date_from: 2010
 
 chunking:
   chunk_size: 200  # tokens
