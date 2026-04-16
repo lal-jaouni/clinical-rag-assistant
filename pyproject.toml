@@ -24,6 +24,7 @@ dependencies = [
     # Document loaders
     "requests>=2.31.0",
     "pdfplumber>=0.11.0",
+    "biopython>=1.83",
     # Retrieval
     "rank-bm25>=0.2.2",
     # Config + data

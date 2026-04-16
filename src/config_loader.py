@@ -64,6 +64,8 @@ class RetrievalConfig(BaseModel):
 
 class IngestConfig(BaseModel):
     mesh_terms: list[str] = Field(default_factory=list)
+    max_per_term: int = 100
+    date_range_start: int = 2010
     chunk_size: int = 200
     overlap: int = 50
     separator: str = "."
@@ -138,6 +140,8 @@ def _merge_ingest(raw: dict[str, Any]) -> dict[str, Any]:
     chunking = raw.get("chunking", {})
     return {
         "mesh_terms": pubmed.get("mesh_terms", []),
+        "max_per_term": pubmed.get("max_per_term", 100),
+        "date_range_start": pubmed.get("date_range_start", 2010),
         "chunk_size": chunking.get("chunk_size", 200),
         "overlap": chunking.get("overlap", 50),
         "separator": chunking.get("separator", "."),

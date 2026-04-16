@@ -35,7 +35,8 @@ Clinical-grade RAG system for answering acute care questions with hallucination 
 
 ### Key Classes & Interfaces
 - `ingest.base.BaseDocumentLoader` -- Abstract loader, implement for new sources
-- `ingest.chunker.ClinicalChunker` -- Sentence-level chunking with overlap
+- `ingest.pubmed_loader.PubMedLoader` -- Entrez client (IPv4-forced, XML-parsed). See `docs/PHASE_2A.md` for gotchas
+- `ingest.chunker.chunk_abstract` -- Tokenizer-free function (not a class). 200-token chunks, 50-token overlap, single chunk if abstract <500 tokens
 - `embed.models.EmbeddingModel` -- PubMedBERT/BioBERT wrapper
 - `retrieve.vector_store.VectorStore` -- pgvector interface (search, metadata filter, add, delete)
 - `retrieve.hybrid_retriever.HybridRetriever` -- Vector + BM25 fusion
@@ -103,13 +104,18 @@ Clinical-grade RAG system for answering acute care questions with hallucination 
 All configs are YAML in `configs/`:
 
 ```yaml
-# configs/ingest.yaml
+# configs/ingest.yaml (Phase 2a -- narrow MTP scope)
 pubmed:
   mesh_terms:
-    - "Acute Kidney Injury"
-    - "Hemorrhagic Shock"
-    - "Transfusion"
-  batch_size: 100
+    - "Massive Transfusion"
+    - "Hemorrhagic Shock/therapy"
+    - "Resuscitation/methods"
+    - "Tranexamic Acid/therapeutic use"
+    - "Blood Transfusion/methods"
+    - "Damage Control Resuscitation"
+    - "Hemostatic Resuscitation"
+  max_per_term: 100
+  date_range_start: 2010
   cache_dir: "/tmp/pubmed_cache"
 
 # configs/model.yaml
@@ -153,13 +159,13 @@ hallucination:
 
 ## Development Workflow
 
-1. **Start**: Clone repo, install dependencies (`pip install -e .`)
+1. **Start**: Clone repo, install dependencies (`make dev-install`)
 2. **Config**: Update `configs/` for your data sources and models
-3. **Ingest**: Run `python -m src.ingest.pubmed_loader --config configs/ingest.yaml` to download and chunk documents
-4. **Embed**: Run `python -m src.embed.embeddings --config configs/model.yaml` to generate and store embeddings
-5. **Test**: `pytest tests/` to run local tests (no Ollama/pgvector needed)
-6. **Integrate**: `docker-compose up` to spin up full stack (Postgres, pgvector, Ollama)
-7. **Evaluate**: Run `python -m src.evaluate.ragas_metrics` against test Q&A set
+3. **Infrastructure**: `make up` to spin up Postgres + Ollama; `make health` to verify
+4. **Ingest (Phase 2a, done)**: `PYTHONUNBUFFERED=1 .venv/bin/python -u scripts/ingest_pubmed.py` loads the PubMed MTP corpus (~620 docs, ~640 chunks). Idempotent.
+5. **Embed (Phase 3, next)**: Batch-embeds `chunks.text` with PubMedBERT; populates `chunks.embedding`
+6. **Test**: `make test` (14 chunker tests green; retrieval/generate tests land with their phases)
+7. **Evaluate (Phase 6)**: RAGAS suite on `data/qa_test_set.json`
 8. **Deploy**: Push to GitHub, Docker images built via CI
 
 ## Deployment

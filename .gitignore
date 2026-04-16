@@ -12,3 +12,5 @@ data/processed/
 mlruns/
 .ipynb_checkpoints/
 *.db
+logs/
+.pytest_cache/

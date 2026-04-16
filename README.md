@@ -152,10 +152,9 @@ clinical-rag-assistant/
 - Base abstract classes for extensibility
 
 ### Phase 2: Data Ingestion (4-5 hours)
-- PubMed Entrez API loader with batch fetching, caching, error handling
-- FDA SaMD guidance PDF parser (PDFPlumber, metadata extraction)
-- ClinicalTrials.gov API integration with filters
-- Chunking pipeline (sentence-level with clinical-aware boundary detection, metadata preservation)
+- **Phase 2a (done)**: PubMed Entrez API loader with IPv4-forced DNS, XML parsing, idempotent upserts. Tokenizer-free sentence-level chunker (200/50 overlap). Runner script ingests 7 MTP-specific MeSH terms → ~620 abstracts, ~640 chunks. 14 chunker tests. Details: `docs/PHASE_2A.md`.
+- **Phase 2b (next)**: FDA SaMD guidance PDF parser (PDFPlumber, metadata extraction)
+- **Phase 2b (next)**: ClinicalTrials.gov API integration with filters
 - Ingestion tests with mock data
 
 ### Phase 3: Embedding & Storage (3-4 hours)

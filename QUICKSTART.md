@@ -1,8 +1,8 @@
-# Quickstart -- Phase 1 Setup
+# Quickstart -- Phases 1 + 2a Setup
 
-This sets up the infrastructure: Postgres (with pgvector), Ollama, dependencies, and schema. You'll be able to run a health check that verifies everything is wired up correctly.
+This sets up the infrastructure (Postgres with pgvector, Ollama, dependencies, schema) and then ingests the PubMed MTP corpus so you have a populated database to query. You'll run a health check that verifies everything is wired up, then the ingestion script that loads ~620 abstracts.
 
-Tested on Linux + macOS. Expected time: 15-20 min (most is the Docker image pulls).
+Tested on Linux + macOS. Expected time: 15-20 min (most is the Docker image pulls), plus ~15s for ingestion.
 
 ## Prerequisites
 
@@ -92,11 +92,31 @@ Re-run `make health`. The LiteLLM client routes to whichever provider you set; n
 
 Supported providers via LiteLLM: Ollama (default), Anthropic, OpenAI, Groq, Gemini, Azure OpenAI, and 100+ others. See https://docs.litellm.ai/docs/providers for full list.
 
+### 8. Ingest the PubMed MTP corpus (Phase 2a)
+
+```bash
+PYTHONUNBUFFERED=1 .venv/bin/python -u scripts/ingest_pubmed.py \
+    2>&1 | tee logs/ingest_pubmed_$(date +%Y-%m-%d).log
+```
+
+Fetches ~625 abstracts across 7 MTP MeSH terms (massive transfusion, hemorrhagic shock, damage control resuscitation, tranexamic acid, etc.), chunks them at 200 tokens with 50-token overlap, and writes to the `documents` and `chunks` tables. Idempotent — re-running upserts rather than duplicating.
+
+Expected: `623 documents inserted, 641 chunks inserted` in ~15s. See `docs/PHASE_2A.md` for design notes, known limitations (corpus skews to 2023-2026), and the three gotchas that took a while to debug (IPv6 DNS hang on NCBI, Entrez XML vs JSON parsing, biopython ListElement shape).
+
+Verify:
+
+```bash
+PGPASSWORD=$POSTGRES_PASSWORD psql -h localhost -U clinical_rag -d clinical_rag \
+    -c "SELECT COUNT(*) FROM documents; SELECT COUNT(*) FROM chunks;"
+```
+
 ## What's next
 
-Phase 1 gives you: infrastructure running, schema in place, config loading, LLM reachable.
+Phase 1 gave you: infrastructure running, schema in place, config loading, LLM reachable.
+Phase 2a gives you: populated `documents` and `chunks` tables (abstracts + metadata, no embeddings yet).
 
-Phase 2 (next): PubMed loader targeting MTP-specific MeSH terms, FDA guidance scraper, chunker. You'll run `python -m ingest.pubmed_loader` to populate the `documents` and `chunks` tables.
+Phase 2b (next): FDA SaMD guidance PDF loader and ClinicalTrials.gov loader. Same upsert pattern, different sources.
+Phase 3: PubMedBERT embedding pipeline — fills the `embedding` column on `chunks` so vector search works.
 
 ## Troubleshooting
 

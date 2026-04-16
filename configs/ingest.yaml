@@ -1,11 +1,14 @@
 pubmed:
   mesh_terms:
-    - "Acute Kidney Injury"
-    - "Hemorrhagic Shock"
-    - "Transfusion"
-    - "Critical Care"
-    - "Emergency Medicine"
-  batch_size: 100
+    - "Massive Transfusion"
+    - "Hemorrhagic Shock/therapy"
+    - "Resuscitation/methods"
+    - "Tranexamic Acid/therapeutic use"
+    - "Blood Transfusion/methods"
+    - "Damage Control Resuscitation"
+    - "Hemostatic Resuscitation"
+  max_per_term: 100
+  date_range_start: 2010
   cache_dir: "/tmp/pubmed_cache"
   api_key: null  # Set via environment variable ENTREZ_API_KEY
 
