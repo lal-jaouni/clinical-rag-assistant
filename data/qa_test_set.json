@@ -1,0 +1,34 @@
+{
+  "qa_pairs": [
+    {
+      "id": "qa_001",
+      "question": "What is the mortality rate in hemorrhagic shock?",
+      "expected_answer_summary": "Mortality varies by severity: Class III (30-40% blood loss) has 20-40% mortality; Class IV (>40% loss) approaches 50-100% without intervention",
+      "source_ids": ["PMID:12345678", "PMID:23456789"],
+      "domain": "trauma",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_002",
+      "question": "What is the FAST protocol in emergency ultrasound?",
+      "expected_answer_summary": "FAST (Focused Assessment with Sonography for Trauma) evaluates four regions: perihepatic, perisplenic, pelvic, and pericardial for free fluid",
+      "source_ids": ["PMID:34567890", "FDA-2021-D-1234"],
+      "domain": "emergency_medicine",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_003",
+      "question": "What are the indications for massive transfusion protocol?",
+      "expected_answer_summary": "MTP indicated for severe hemorrhage with anticipated need for >10 units RBC in 24h, or ongoing bleeding unresponsive to resuscitation",
+      "source_ids": ["PMID:45678901"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    }
+  ],
+  "metadata": {
+    "total_pairs": 3,
+    "creation_date": "2025-01-01",
+    "domains": ["trauma", "emergency_medicine", "transfusion", "critical_care"],
+    "note": "This is a placeholder. Expand with 50-100 curated clinical Q&A pairs before evaluation."
+  }
+}

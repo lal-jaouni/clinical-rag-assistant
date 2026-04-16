@@ -1,0 +1,19 @@
+embedding:
+  model: "pubmedbert-base-uncased-abstract"
+  # Alternative: "dmis-lab/biobert-v1.1"
+  device: "cuda"  # or "cpu"
+  batch_size: 32
+
+llm:
+  provider: "ollama"
+  base_url: "http://localhost:11434"
+  primary_model: "meditron:7b"
+  fallback_model: "biomistral:7b"
+  temperature: 0.2  # Low temperature for clinical safety
+  max_tokens: 500
+  top_p: 0.9
+
+safety:
+  confidence_threshold: 0.7
+  source_grounding_threshold: 0.85
+  max_hallucination_rate: 0.02

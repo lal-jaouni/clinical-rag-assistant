@@ -1,0 +1,29 @@
+ragas:
+  batch_size: 10
+  metrics:
+    - "faithfulness"
+    - "answer_relevance"
+    - "context_precision"
+  targets:
+    faithfulness: 0.85
+    answer_relevance: 0.80
+    context_precision: 0.80
+
+hallucination_detection:
+  enabled: true
+  confidence_threshold: 0.7
+  track_per_source: true
+  alert_threshold: 0.05  # Flag if >5% hallucination rate
+
+performance:
+  latency_target_ms: 3000  # <3s for ED use case
+  throughput_target_qps: 1
+
+test_set:
+  path: "data/qa_test_set.json"
+  min_examples: 50
+  domains:
+    - "trauma"
+    - "critical_care"
+    - "transfusion"
+    - "emergency_medicine"

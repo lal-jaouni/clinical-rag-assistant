@@ -1,0 +1,30 @@
+pubmed:
+  mesh_terms:
+    - "Acute Kidney Injury"
+    - "Hemorrhagic Shock"
+    - "Transfusion"
+    - "Critical Care"
+    - "Emergency Medicine"
+  batch_size: 100
+  cache_dir: "/tmp/pubmed_cache"
+  api_key: null  # Set via environment variable ENTREZ_API_KEY
+
+fda:
+  document_types:
+    - "AI/ML SaMD Guidance"
+    - "510(k) Clearance Pathways"
+    - "Pre-Cert Framework"
+  cache_dir: "/tmp/fda_cache"
+
+clinical_trials:
+  domains:
+    - "Emergency Medicine"
+    - "Hematology"
+    - "Transfusion"
+  status: "recruiting"
+  max_results: 500
+
+chunking:
+  chunk_size: 200  # tokens
+  overlap: 50
+  separator: "."  # sentence-level splitting
