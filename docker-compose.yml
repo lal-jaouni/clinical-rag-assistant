@@ -1,0 +1,44 @@
+services:
+  # PostgreSQL with pgvector extension for vector storage + metadata
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: clinical-rag-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-clinical_rag}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme_localdev}
+      POSTGRES_DB: ${POSTGRES_DB:-clinical_rag}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-clinical_rag}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # Ollama for local LLM inference (default LLM backend)
+  # Pull models after startup:
+  #   docker exec clinical-rag-ollama ollama pull biomistral:7b
+  ollama:
+    image: ollama/ollama:latest
+    container_name: clinical-rag-ollama
+    restart: unless-stopped
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # Uncomment to enable GPU acceleration (requires NVIDIA Container Toolkit)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  postgres_data:
+  ollama_data:

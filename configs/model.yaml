@@ -1,17 +1,23 @@
 embedding:
   model: "pubmedbert-base-uncased-abstract"
-  # Alternative: "dmis-lab/biobert-v1.1"
-  device: "cuda"  # or "cpu"
+  # Alternative: "dmis-lab/biobert-v1.1", "ncbi/MedCPT-Article-Encoder"
+  device: "cpu"  # set to "cuda" if you have a GPU
   batch_size: 32
 
 llm:
-  provider: "ollama"
-  base_url: "http://localhost:11434"
-  primary_model: "meditron:7b"
-  fallback_model: "biomistral:7b"
-  temperature: 0.2  # Low temperature for clinical safety
+  # LiteLLM-format model string. Examples:
+  #   ollama/biomistral:7b                     (default, self-hosted)
+  #   ollama/meditron:7b                       (older biomedical model)
+  #   anthropic/claude-3-5-sonnet-20241022     (requires ANTHROPIC_API_KEY)
+  #   openai/gpt-4o-mini                       (requires OPENAI_API_KEY)
+  #   groq/llama-3.1-70b-versatile             (requires GROQ_API_KEY)
+  # Override via LLM_MODEL env var in .env.
+  model: "ollama/biomistral:7b"
+  temperature: 0.1  # low for clinical safety (less variance in answers)
   max_tokens: 500
   top_p: 0.9
+  # Extra provider kwargs (e.g. api_base for self-hosted Ollama)
+  provider_kwargs: {}
 
 safety:
   confidence_threshold: 0.7
