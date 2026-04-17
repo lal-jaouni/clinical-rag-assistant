@@ -8,7 +8,7 @@ from typing import Any
 
 from sqlalchemy.orm import Session
 
-from src.embed.models import EmbeddingModel
+from embed.models import EmbeddingModel
 
 
 def batch_embed_db(
@@ -28,7 +28,7 @@ def batch_embed_db(
     Returns:
         Summary dict with counts and timing
     """
-    from src.db.schema import Chunk
+    from db.schema import Chunk
 
     start = time.time()
     summary = {"total_chunks": 0, "embedded": 0, "skipped": 0, "elapsed_seconds": 0.0}
