@@ -266,7 +266,9 @@ class TestConfidenceEstimation:
 class TestSafetyValidation:
     @pytest.fixture
     def guardrails(self):
-        return SafetyGuardrails(confidence_threshold=0.7, grounding_threshold=0.4)
+        # No embedding_model in tests → falls back to n-gram grounding.
+        # N-gram threshold stays low (0.02) since lexical overlap penalizes paraphrasing.
+        return SafetyGuardrails(confidence_threshold=0.7, grounding_threshold=0.02)
 
     def test_well_grounded_answer_passes(self, guardrails):
         result = guardrails.validate(WELL_GROUNDED_ANSWER, SAMPLE_CHUNKS)

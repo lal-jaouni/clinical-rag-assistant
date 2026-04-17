@@ -12,7 +12,14 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, Protocol, runtime_checkable
+
+
+@runtime_checkable
+class Embedder(Protocol):
+    """Minimal interface for an embedding model (e.g. EmbeddingModel)."""
+
+    def embed(self, texts: list[str], **kwargs) -> list[list[float]]: ...
 
 
 # Phrases that indicate the model is giving direct patient instructions
@@ -68,12 +75,14 @@ class SafetyGuardrails:
     def __init__(
         self,
         confidence_threshold: float = 0.7,
-        grounding_threshold: float = 0.4,
+        grounding_threshold: float = 0.50,
         min_citation_ratio: float = 0.3,
+        embedding_model: Embedder | None = None,
     ):
         self.confidence_threshold = confidence_threshold
         self.grounding_threshold = grounding_threshold
         self.min_citation_ratio = min_citation_ratio
+        self.embedding_model = embedding_model
 
     # ------------------------------------------------------------------
     # Public API
@@ -149,17 +158,61 @@ class SafetyGuardrails:
     ) -> float:
         """Score how well the response is grounded in the sources (0-1).
 
-        Uses overlapping content-word n-grams (n=2,3) between the answer and
-        the concatenated source texts as a lightweight faithfulness proxy.
+        When an embedding model is available, uses cosine similarity between
+        the response embedding and each source chunk embedding (max score).
+        This handles paraphrasing far better than lexical overlap.
+
+        Falls back to n-gram overlap when no embedding model is set.
         """
         if not source_chunks or not response.strip():
             return 0.0
 
+        if self.embedding_model is not None:
+            return self._semantic_grounding(response, source_chunks)
+        return self._ngram_grounding(response, source_chunks)
+
+    def _semantic_grounding(
+        self, response: str, source_chunks: list[dict[str, Any]]
+    ) -> float:
+        """Cosine similarity between response and source chunk embeddings.
+
+        Embeds the response and each source chunk, returns the max pairwise
+        cosine similarity. PubMedBERT embeddings are L2-normalized, so
+        cosine similarity = dot product.
+        """
+        source_texts = [c.get("text", "") for c in source_chunks if c.get("text")]
+        if not source_texts:
+            return 0.0
+
+        # Strip bracket citations before embedding the response
+        clean_response = re.sub(r"\[\d+\]", "", response).strip()
+
+        all_texts = [clean_response] + source_texts
+        embeddings = self.embedding_model.embed(all_texts)
+
+        response_emb = embeddings[0]
+        source_embs = embeddings[1:]
+
+        # Max cosine similarity across source chunks
+        max_sim = max(
+            sum(a * b for a, b in zip(response_emb, source_emb))
+            for source_emb in source_embs
+        )
+        # Clamp to [0, 1]
+        return max(0.0, min(1.0, max_sim))
+
+    def _ngram_grounding(
+        self, response: str, source_chunks: list[dict[str, Any]]
+    ) -> float:
+        """Fallback: n-gram overlap grounding score (0-1).
+
+        Uses overlapping content-word n-grams (n=2,3) between the answer and
+        the concatenated source texts as a lightweight faithfulness proxy.
+        """
         source_text = " ".join(c.get("text", "") for c in source_chunks).lower()
-        response_lower = response.lower()
 
         # Extract content-word n-grams from the response (skip stopwords, citations)
-        response_clean = re.sub(r"\[\d+\]", "", response_lower)
+        response_clean = re.sub(r"\[\d+\]", "", response.lower())
         response_words = _content_words(response_clean)
 
         if len(response_words) < 3:

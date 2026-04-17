@@ -10,7 +10,7 @@ from typing import Any
 
 from rank_bm25 import BM25Okapi
 
-from src.retrieve.vector_store import VectorStore
+from retrieve.vector_store import VectorStore
 
 
 class BM25Index:

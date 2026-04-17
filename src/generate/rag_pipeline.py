@@ -14,7 +14,7 @@ from typing import Any
 from generate.litellm_client import LLMClient, LLMResponse
 from generate.output_formatter import format_response
 from generate.prompt_templates import SYSTEM_PROMPT, build_user_prompt
-from generate.safety_guardrails import SafetyGuardrails, SafetyResult
+from generate.safety_guardrails import Embedder, SafetyGuardrails, SafetyResult
 
 
 class RAGPipeline:
@@ -33,6 +33,15 @@ class RAGPipeline:
         self.guardrails = guardrails
         self.embedding_model = embedding_model
         self.query_processor = query_processor
+
+        # Share embedding model with guardrails for semantic grounding.
+        # Only auto-share real Embedder instances (not mocks).
+        if (
+            embedding_model is not None
+            and guardrails.embedding_model is None
+            and isinstance(embedding_model, Embedder)
+        ):
+            guardrails.embedding_model = embedding_model
 
     def answer(
         self,

@@ -2,33 +2,489 @@
   "qa_pairs": [
     {
       "id": "qa_001",
-      "question": "What is the mortality rate in hemorrhagic shock?",
-      "expected_answer_summary": "Mortality varies by severity: Class III (30-40% blood loss) has 20-40% mortality; Class IV (>40% loss) approaches 50-100% without intervention",
-      "source_ids": ["PMID:12345678", "PMID:23456789"],
-      "domain": "trauma",
+      "question": "What triggers activation of a massive transfusion protocol?",
+      "expected_answer_summary": "MTP is activated when a patient requires more than 10 units of packed red blood cells within 24 hours, or when there is uncontrolled hemorrhage with hemodynamic instability. Common triggers include ABC score >=2, Shock Index >1.0, and clinical assessment of ongoing hemorrhage.",
+      "source_ids": ["NCT02083549", "NCT02350101", "NCT02863250"],
+      "domain": "transfusion",
       "difficulty": "medium"
     },
     {
       "id": "qa_002",
-      "question": "What is the FAST protocol in emergency ultrasound?",
-      "expected_answer_summary": "FAST (Focused Assessment with Sonography for Trauma) evaluates four regions: perihepatic, perisplenic, pelvic, and pericardial for free fluid",
-      "source_ids": ["PMID:34567890", "FDA-2021-D-1234"],
+      "question": "What is the recommended plasma to red blood cell ratio in massive transfusion?",
+      "expected_answer_summary": "The PROPPR trial compared 1:1:1 (plasma:platelets:RBCs) vs 1:1:2 ratios. The 1:1:1 ratio showed improved hemostasis and reduced 24-hour mortality, though 30-day mortality was similar. Current guidelines recommend a balanced ratio of at least 1:2 FFP:RBC, with many centers adopting 1:1.",
+      "source_ids": ["NCT01545232", "NCT02416817"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_003",
+      "question": "What is the role of tranexamic acid in trauma hemorrhage?",
+      "expected_answer_summary": "Tranexamic acid is an antifibrinolytic agent that reduces bleeding and mortality in trauma when administered within 3 hours of injury. The CRASH-2 trial demonstrated reduced all-cause mortality. Early administration is critical as delayed use may increase thrombotic risk.",
+      "source_ids": ["NCT01402882", "NCT01938768", "NCT02086500", "NCT02535949"],
+      "domain": "trauma",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_004",
+      "question": "What is the evidence for prehospital tranexamic acid in traumatic brain injury?",
+      "expected_answer_summary": "Prehospital TXA for TBI is under active investigation. The CRASH-3 trial showed potential benefit in mild-to-moderate TBI when given early. Studies like NCT01990768 and NCT02187120 examine safety and efficacy in the prehospital setting, with promising but not yet definitive results.",
+      "source_ids": ["NCT01990768", "NCT02187120", "NCT01402882"],
+      "domain": "trauma",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_005",
+      "question": "How does viscoelastic hemostatic assay-guided transfusion compare to conventional coagulation testing?",
+      "expected_answer_summary": "VHA-guided transfusion using ROTEM or TEG provides rapid point-of-care results that enable goal-directed hemostatic therapy. Studies show VHA guidance reduces blood product use and may improve outcomes compared to conventional coagulation testing in trauma and surgical bleeding.",
+      "source_ids": ["NCT01536496", "NCT02593877"],
+      "domain": "transfusion",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_006",
+      "question": "What is the role of fibrinogen concentrate in trauma hemorrhage?",
+      "expected_answer_summary": "Fibrinogen concentrate is used to rapidly correct hypofibrinogenemia in trauma hemorrhage. It can be administered faster than cryoprecipitate and provides a known dose. Trials like FEISTY compare fibrinogen concentrate to cryoprecipitate in traumatic hemorrhage requiring hemostatic resuscitation.",
+      "source_ids": ["NCT02344069", "NCT02745041"],
+      "domain": "transfusion",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_007",
+      "question": "What are the benefits of whole blood resuscitation in trauma?",
+      "expected_answer_summary": "Whole blood provides balanced resuscitation with 1:1:1 ratio of components in a single unit. It avoids dilutional coagulopathy, reduces donor exposures, and simplifies logistics. Military and civilian studies show favorable outcomes including in prehospital and walking blood bank settings.",
+      "source_ids": ["NCT02924792", "NCT02784951"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_008",
+      "question": "What is hypotensive resuscitation in hemorrhagic shock?",
+      "expected_answer_summary": "Hypotensive (permissive) resuscitation targets a lower-than-normal blood pressure (SBP 80-90 mmHg) until surgical hemostasis is achieved. This strategy reduces ongoing hemorrhage by avoiding clot disruption while maintaining minimal organ perfusion. Supported by trials like NCT01411852.",
+      "source_ids": ["NCT01411852", "NCT01239680"],
+      "domain": "trauma",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_009",
+      "question": "What is REBOA and when is it indicated?",
+      "expected_answer_summary": "Resuscitative Endovascular Balloon Occlusion of the Aorta (REBOA) is a minimally invasive technique for temporary hemorrhage control in noncompressible torso hemorrhage. It is placed in Zone 1 (descending thoracic aorta) for abdominal hemorrhage or Zone 3 for pelvic hemorrhage as a bridge to definitive surgery.",
+      "source_ids": ["PMID:38368774", "PMID:38441108"],
+      "domain": "trauma",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_010",
+      "question": "What is the role of vasopressin in hemorrhagic shock?",
+      "expected_answer_summary": "Vasopressin levels are often depleted in prolonged hemorrhagic shock (relative vasopressin deficiency). Exogenous vasopressin may augment blood pressure in refractory shock. The VITRIS study examined vasopressin vs placebo in refractory traumatic hemorrhagic shock.",
+      "source_ids": ["NCT00379522", "NCT01107314"],
+      "domain": "trauma",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_011",
+      "question": "How does direct peritoneal resuscitation work in damage control surgery?",
+      "expected_answer_summary": "Direct peritoneal resuscitation (DPR) involves instilling a glucose-based dialysate into the peritoneal cavity during damage control surgery. It improves visceral perfusion, reduces organ edema, and may facilitate earlier abdominal closure. However, it may be associated with increased infection risk.",
+      "source_ids": ["NCT01771055", "PMID:39932729", "PMID:38246013"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_012",
+      "question": "What is the mortality rate in hemorrhagic shock by classification?",
+      "expected_answer_summary": "Hemorrhagic shock is classified by blood volume loss: Class I (<15%, minimal), Class II (15-30%, moderate), Class III (30-40%, mortality 20-40%), Class IV (>40%, mortality approaches 50-100% without intervention). Mortality depends on intervention timing, injury pattern, and resuscitation strategy.",
+      "source_ids": ["PMID:38528572", "PMID:38453302"],
+      "domain": "trauma",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_013",
+      "question": "What is the lethal triad in trauma?",
+      "expected_answer_summary": "The lethal triad (trauma triad of death) consists of hypothermia, acidosis, and coagulopathy. These three conditions form a self-reinforcing cycle that significantly increases mortality in severely injured patients. Damage control resuscitation and surgery aim to break this cycle.",
+      "source_ids": ["PMID:38453302", "PMID:38227676"],
+      "domain": "trauma",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_014",
+      "question": "What is damage control orthopedics versus early total care?",
+      "expected_answer_summary": "Damage control orthopedics (DCO) uses temporary stabilization (external fixation) to minimize the second hit of surgery in unstable patients. Early total care (ETC) involves definitive fixation at initial surgery. DCO is preferred in hemodynamically unstable or polytrauma patients; ETC in stable patients.",
+      "source_ids": ["PMID:38227676"],
+      "domain": "trauma",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_015",
+      "question": "What is the role of lactate in predicting traumatic coagulopathy?",
+      "expected_answer_summary": "Elevated lactate and base deficit are biomarkers of tissue hypoperfusion and predict the development of traumatic coagulopathy. Higher lactate levels correlate with more severe shock and increased transfusion needs. Lactate clearance can guide resuscitation adequacy.",
+      "source_ids": ["PMID:40644352", "PMID:41223619", "NCT01741818"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_016",
+      "question": "What are the effects of freeze-dried plasma in prehospital care?",
+      "expected_answer_summary": "Freeze-dried (lyophilized) plasma can be stored at room temperature and reconstituted rapidly, making it ideal for prehospital use. Studies show it may reduce coagulopathy and improve outcomes when given early in hemorrhagic shock, prior to hospital arrival.",
+      "source_ids": ["PMID:38501905", "NCT02736812"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_017",
+      "question": "How does prehospital intubation affect mortality in hemorrhagic shock?",
+      "expected_answer_summary": "Prehospital intubation in hemorrhagic shock is associated with increased mortality compared to in-hospital intubation in some studies, possibly due to delays in hemorrhage control, hemodynamic effects of induction agents, and positive pressure ventilation reducing venous return.",
+      "source_ids": ["PMID:41128472", "PMID:38197435"],
+      "domain": "emergency_medicine",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_018",
+      "question": "What is the impact of the ABC-Resuscitation sequence in prehospital trauma?",
+      "expected_answer_summary": "The exsanguinating ABC sequence prioritizes hemorrhage control (C) over airway and breathing in patients with severe hemorrhage. This modified approach may improve survival by addressing the primary cause of death first, rather than following the traditional A-B-C sequence.",
+      "source_ids": ["PMID:38197435"],
+      "domain": "emergency_medicine",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_019",
+      "question": "What is protective mechanical ventilation in ARDS?",
+      "expected_answer_summary": "Protective ventilation uses low tidal volumes (6 mL/kg predicted body weight), moderate PEEP, and plateau pressure <30 cmH2O to minimize ventilator-induced lung injury. It reduces mortality in ARDS by limiting barotrauma, volutrauma, and biotrauma.",
+      "source_ids": ["PMID:39880492", "PMID:38750543", "PMID:41075121"],
+      "domain": "critical_care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_020",
+      "question": "What is mechanical power in ventilation and why does it matter?",
+      "expected_answer_summary": "Mechanical power is the energy per unit time delivered by the ventilator to the respiratory system. It integrates tidal volume, respiratory rate, driving pressure, PEEP, and flow. Higher mechanical power is associated with ventilator-induced lung injury and mortality.",
+      "source_ids": ["PMID:40030025", "PMID:41077231", "PMID:41075121"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_021",
+      "question": "What is the role of ECMO in acute respiratory failure?",
+      "expected_answer_summary": "Extracorporeal membrane oxygenation provides gas exchange support in severe ARDS refractory to conventional ventilation. Venovenous ECMO is used for respiratory failure, allowing ultra-protective ventilation settings. The REST RCT and other studies evaluate its efficacy.",
+      "source_ids": ["PMID:38240747", "PMID:40758387", "PMID:40912283"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_022",
+      "question": "What is the optimal ventilation strategy for patients with acute brain injury?",
+      "expected_answer_summary": "Ventilation in acute brain injury must balance lung protection with cerebral perfusion. Moderate PEEP, normocapnia, and avoidance of hypoxemia are key. Hyperventilation should be avoided except for acute herniation. Baseline parameters and their effects on ICP must be monitored.",
+      "source_ids": ["PMID:39970391", "NCT06192342"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_023",
+      "question": "What is the role of thromboelastography in septic shock?",
+      "expected_answer_summary": "TEG/ROTEM can identify coagulation abnormalities in sepsis including hypercoagulable and hypocoagulable states. It helps guide individualized hemostatic therapy and may predict outcomes. DIC scoring combined with TEG improves assessment of sepsis-associated coagulopathy.",
+      "source_ids": ["NCT03095625", "NCT04610853", "NCT06363149"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_024",
+      "question": "What is the management approach for septic shock?",
+      "expected_answer_summary": "Septic shock management includes early recognition, blood cultures, broad-spectrum antibiotics within 1 hour, aggressive fluid resuscitation (30 mL/kg crystalloid), vasopressors (norepinephrine first-line) for MAP >65 mmHg, source control, and lactate-guided resuscitation.",
+      "source_ids": ["PMID:39904062", "PMID:39248089"],
+      "domain": "critical_care",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_025",
+      "question": "Should vasopressors or advanced airway management come first in cardiac arrest?",
+      "expected_answer_summary": "Current evidence suggests early vasopressor administration may improve outcomes in cardiac arrest. Prioritizing vasopressors over advanced airway management (especially supraglottic airways vs ETT) is supported by some studies, as early epinephrine improves ROSC rates.",
+      "source_ids": ["PMID:39486473", "PMID:38816786"],
+      "domain": "emergency_medicine",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_026",
+      "question": "What is the fluid management approach in sepsis?",
+      "expected_answer_summary": "Initial aggressive crystalloid resuscitation (30 mL/kg) is recommended in septic shock. After initial resuscitation, fluid responsiveness should guide further administration. Balanced crystalloids (Ringer's lactate) are preferred over normal saline. Fluid overload increases morbidity.",
+      "source_ids": ["PMID:39248089", "NCT05931601"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_027",
+      "question": "What is the FDA framework for AI/ML-based software as a medical device?",
+      "expected_answer_summary": "The FDA regulates AI/ML-based SaMD through existing pathways (510(k), De Novo, PMA) and has developed the AI/ML SaMD Action Plan. This includes the Total Product Lifecycle approach, Good Machine Learning Practices, predetermined change control plans, and transparency requirements.",
+      "source_ids": ["fda:aiml-samd-action-plan-2021", "fda:gmlp-2021"],
+      "domain": "fda_regulatory",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_028",
+      "question": "What are predetermined change control plans for ML-enabled medical devices?",
+      "expected_answer_summary": "PCCPs allow manufacturers to describe planned modifications to AI/ML devices and the methodology to implement them in a controlled manner. This enables iterative improvement without requiring new submissions for each change, provided changes follow the pre-specified plan.",
+      "source_ids": ["fda:pccp-final-2024"],
+      "domain": "fda_regulatory",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_029",
+      "question": "What are the Good Machine Learning Practice principles for medical devices?",
+      "expected_answer_summary": "GMLP principles include: using multi-disciplinary expertise, good software engineering and security practices, representative training data, independent datasets for testing, reference datasets for comparison, designed-for-purpose models, focused on performance and human factors, and deployed models with monitoring.",
+      "source_ids": ["fda:gmlp-2021"],
+      "domain": "fda_regulatory",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_030",
+      "question": "How does the FDA define clinical decision support software?",
+      "expected_answer_summary": "FDA's CDS guidance defines four criteria for non-device CDS: not intended to acquire/process/analyze medical data, intended for HCPs, intended to enable independent review by HCP, and provides basis for recommendations. Software meeting all four criteria may be exempt from device regulation.",
+      "source_ids": ["fda:cds-final-2022"],
+      "domain": "fda_regulatory",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_031",
+      "question": "What is the FDA approach to clinical evaluation of SaMD?",
+      "expected_answer_summary": "The FDA uses the IMDRF framework for SaMD clinical evaluation, categorizing by significance of information (treat/diagnose/drive/inform) and state of healthcare situation (critical/serious/non-serious). Higher risk categories require more rigorous clinical evidence.",
+      "source_ids": ["fda:samd-clinical-evaluation-2017"],
+      "domain": "fda_regulatory",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_032",
+      "question": "What is the evidence for topical tranexamic acid in surgical bleeding?",
+      "expected_answer_summary": "Topical TXA applied directly to surgical wounds can reduce blood loss with minimal systemic absorption. Studies in orthopedic surgery (hip, knee arthroplasty), spine surgery, and burn excision show reduced transfusion requirements with topical application.",
+      "source_ids": ["NCT02314988", "NCT02664909", "NCT02918201"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_033",
+      "question": "What is the tranexamic acid mechanism and pharmacokinetics in trauma?",
+      "expected_answer_summary": "TXA is a lysine analogue that competitively inhibits plasminogen activation, preventing fibrinolysis. In trauma, it blocks the hyperfibrinolytic state triggered by tissue injury and shock. The TAMPITI trial studied TXA mechanisms and pharmacokinetics specifically in traumatic injury.",
+      "source_ids": ["NCT02535949", "NCT01938768"],
+      "domain": "trauma",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_034",
+      "question": "How are frozen red blood cells used in trauma transfusion?",
+      "expected_answer_summary": "Frozen (cryopreserved) RBCs extend shelf life to 10 years and can be stored in remote or military settings. After thawing and deglycerolization, they function comparably to fresh RBCs. Studies evaluate their safety and efficacy in trauma resuscitation.",
+      "source_ids": ["NCT01038557"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_035",
+      "question": "What is the relationship between whole blood storage duration and hemostatic function?",
+      "expected_answer_summary": "Prolonged whole blood storage alters fibrinogen levels and reduces thrombin generation capacity. These changes in the hemostatic profile may affect the efficacy of stored whole blood for resuscitation compared to fresh whole blood.",
+      "source_ids": ["PMID:38531825"],
+      "domain": "transfusion",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_036",
+      "question": "What are effective approaches to noncompressible torso hemorrhage?",
+      "expected_answer_summary": "Noncompressible torso hemorrhage (NCTH) requires a combination of approaches: REBOA for temporary aortic occlusion, damage control surgery, hemostatic resuscitation, and angioembolization. The choice depends on injury location, hemodynamic status, and available resources.",
+      "source_ids": ["PMID:38441108", "PMID:38368774"],
+      "domain": "trauma",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_037",
+      "question": "What is the role of walking blood banks in austere environments?",
+      "expected_answer_summary": "Walking blood banks (WBB) use pre-screened donors to provide fresh whole blood when stored products are unavailable. They are used in military, maritime, and remote civilian settings. Pre-screening for blood type and infectious diseases is essential for safety.",
+      "source_ids": ["PMID:38408045", "PMID:38282289"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_038",
+      "question": "How does hypothermia after cardiac arrest affect neurological outcomes?",
+      "expected_answer_summary": "Targeted temperature management (32-36C) after cardiac arrest is used to reduce anoxic brain injury. The optimal temperature and duration remain debated. Some studies suggest 33C may be superior to 36C for shockable rhythms, while others show equivalent outcomes.",
+      "source_ids": ["PMID:38051382"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_039",
+      "question": "What is the relationship between endotracheal intubation and laryngeal tube in cardiac arrest outcomes?",
+      "expected_answer_summary": "Laryngeal tube use in out-of-hospital cardiac arrest may be associated with higher rates of anoxic brain damage compared to endotracheal intubation in patients with shockable rhythms. Airway device selection in cardiac arrest should consider the risk of aspiration and hypoxia duration.",
+      "source_ids": ["PMID:39437934"],
+      "domain": "emergency_medicine",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_040",
+      "question": "What is the role of lactate clearance in predicting massive transfusion needs?",
+      "expected_answer_summary": "Lactate clearance rate can predict the need for massive transfusion in bleeding patients. Persistent lactate elevation or poor clearance indicates ongoing tissue hypoperfusion and may trigger MTP activation. Studies in upper GI bleeding show lactate clearance predicts transfusion requirements.",
+      "source_ids": ["PMID:41593508", "PMID:40644352"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_041",
+      "question": "How do antibiotic concentrations change during massive transfusion?",
+      "expected_answer_summary": "Massive transfusion causes hemodilution which reduces antibiotic concentrations. This may lead to subtherapeutic drug levels in trauma patients receiving concurrent antibiotic therapy. The ACME study examines how blood product administration affects antibiotic pharmacokinetics.",
+      "source_ids": ["NCT06699901", "PMID:40982578"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_042",
+      "question": "What is the abdominal compartment syndrome and how is it prevented during resuscitation?",
+      "expected_answer_summary": "Abdominal compartment syndrome (ACS) occurs when intra-abdominal pressure rises above 20 mmHg with organ dysfunction, often due to massive crystalloid resuscitation. Prevention includes balanced resuscitation, avoiding fluid overload, and monitoring intra-abdominal pressure. Algorithmic fluid management reduces ACS incidence in burns.",
+      "source_ids": ["PMID:38035617"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_043",
+      "question": "What is the DIC score and its role in sepsis management?",
+      "expected_answer_summary": "The DIC (Disseminated Intravascular Coagulation) score assesses platelet count, fibrin markers, PT prolongation, and fibrinogen to diagnose and grade DIC. In septic shock, DIC score changes correlate with organ dysfunction severity and can guide anticoagulant therapy.",
+      "source_ids": ["NCT06363149", "NCT06373159", "NCT04610853"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_044",
+      "question": "What are the effects of mechanical ventilation on the extracellular matrix?",
+      "expected_answer_summary": "Mechanical ventilation alters the interstitial extracellular matrix in both healthy and ARDS-affected lungs. Cyclic stretch causes collagen remodeling, proteoglycan degradation, and inflammatory signaling. These changes contribute to ventilator-induced lung injury progression.",
+      "source_ids": ["PMID:38750543", "PMID:40167363"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_045",
+      "question": "What mobile applications exist for trauma care decision support?",
+      "expected_answer_summary": "Mobile applications for trauma care include clinical decision support tools, transfusion calculators, and protocol-based resuscitation guides. Their effectiveness in combat casualty simulations has been evaluated, showing potential to standardize care delivery in austere environments.",
+      "source_ids": ["PMID:38016268"],
       "domain": "emergency_medicine",
       "difficulty": "easy"
     },
     {
-      "id": "qa_003",
-      "question": "What are the indications for massive transfusion protocol?",
-      "expected_answer_summary": "MTP indicated for severe hemorrhage with anticipated need for >10 units RBC in 24h, or ongoing bleeding unresponsive to resuscitation",
-      "source_ids": ["PMID:45678901"],
+      "id": "qa_046",
+      "question": "What is the role of platelet aggregation monitoring in critically ill patients?",
+      "expected_answer_summary": "Platelet aggregation alterations occur in severe viral infections and sepsis. Impaired platelet reactivity may serve as an early biomarker for sepsis-related thrombocytopenia. Monitoring aggregation helps guide antiplatelet therapy and predict bleeding risk in ICU patients.",
+      "source_ids": ["PMID:39338970", "NCT03716310"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_047",
+      "question": "How is low-volume resuscitation being developed for prehospital hemorrhagic shock?",
+      "expected_answer_summary": "Low-volume resuscitants (LVR) aim to provide effective resuscitation with minimal fluid volumes for prehospital use. Biomimetic and hypertonic formulations are being engineered to restore hemodynamics and reduce oxygen debt while minimizing logistic burden in austere settings.",
+      "source_ids": ["PMID:38753586", "PMID:38706102"],
+      "domain": "trauma",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_048",
+      "question": "What is the FAST protocol in emergency ultrasound?",
+      "expected_answer_summary": "FAST (Focused Assessment with Sonography for Trauma) evaluates four regions: right upper quadrant (perihepatic), left upper quadrant (perisplenic), pelvis (suprapubic), and subxiphoid (pericardial) for free fluid. Extended FAST (eFAST) adds bilateral anterior thoracic views for pneumothorax.",
+      "source_ids": [],
+      "domain": "emergency_medicine",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_049",
+      "question": "What is the role of remote ischemic conditioning in trauma?",
+      "expected_answer_summary": "Remote ischemic conditioning (RIC) applies brief cycles of limb ischemia/reperfusion to confer systemic protection. In trauma patients, it may modulate neutrophil function and the immune-inflammatory and coagulation profiles, potentially reducing secondary organ injury.",
+      "source_ids": ["NCT02071290"],
+      "domain": "trauma",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_050",
+      "question": "What is the role of the caval index in assessing volume status?",
+      "expected_answer_summary": "The caval index (IVC collapsibility index) correlates with central venous pressure and volume status. A high caval index (>50%) suggests hypovolemia and fluid responsiveness. It can be measured with bedside ultrasound and correlates with plasma lactate levels.",
+      "source_ids": ["NCT01741818"],
+      "domain": "emergency_medicine",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_051",
+      "question": "Tell me about quantum computing applications in cooking",
+      "expected_answer_summary": "This question is out of domain. No relevant clinical sources should be found. The system should respond with a safe refusal indicating insufficient evidence.",
+      "source_ids": [],
+      "domain": "out_of_domain",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_052",
+      "question": "What is the best cryptocurrency to invest in right now?",
+      "expected_answer_summary": "This question is out of domain. No clinical sources apply. The system should respond with a safe refusal.",
+      "source_ids": [],
+      "domain": "out_of_domain",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_053",
+      "question": "Can you write me a poem about flowers?",
+      "expected_answer_summary": "This question is out of domain. The system should respond with a safe refusal indicating this is outside its clinical scope.",
+      "source_ids": [],
+      "domain": "out_of_domain",
+      "difficulty": "easy"
+    },
+    {
+      "id": "qa_054",
+      "question": "What is the role of subcutaneous lactate monitoring in trauma?",
+      "expected_answer_summary": "Subcutaneous lactate monitoring provides a minimally invasive alternative to arterial lactate measurement. Studies in swine models show subcutaneous lactate correlates with arterial lactate in severe combined trauma and shock, suggesting potential for continuous field monitoring.",
+      "source_ids": ["PMID:41223619"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_055",
+      "question": "What is the optimal expiratory duration in mechanical ventilation?",
+      "expected_answer_summary": "Adequate expiratory duration prevents air trapping and auto-PEEP. Research suggests that atelectrauma can be avoided if expiration is sufficiently brief (preventing derecruitment), while avoiding too-short expiration that causes gas trapping. The balance affects ventilator-induced lung injury.",
+      "source_ids": ["PMID:39380082", "PMID:41214725"],
+      "domain": "critical_care",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_056",
+      "question": "What are the indications for massive transfusion protocol in non-trauma patients?",
+      "expected_answer_summary": "MTP can be indicated in non-trauma settings including obstetric hemorrhage, gastrointestinal bleeding, surgical bleeding, and ruptured aortic aneurysm. The principles of balanced resuscitation and early blood product delivery apply regardless of etiology.",
+      "source_ids": ["NCT02863250", "PMID:41593508"],
       "domain": "transfusion",
       "difficulty": "medium"
+    },
+    {
+      "id": "qa_057",
+      "question": "What is the evidence for early vasopressor use in hemorrhagic shock?",
+      "expected_answer_summary": "Early vasopressor initiation in hemorrhagic shock is debated. While vasopressors can maintain perfusion pressure, they may mask ongoing hemorrhage and worsen outcomes if definitive hemorrhage control is delayed. Studies examine early vasopressor use as an adjunct to, not replacement for, volume resuscitation.",
+      "source_ids": ["NCT05931601", "NCT00379522"],
+      "domain": "emergency_medicine",
+      "difficulty": "hard"
+    },
+    {
+      "id": "qa_058",
+      "question": "How does tranexamic acid reduce blood loss in cesarean delivery?",
+      "expected_answer_summary": "TXA administered before cesarean delivery reduces postpartum hemorrhage by inhibiting fibrinolysis at the placental site. Multiple RCTs compare TXA with other interventions like uterine cooling. Prophylactic use at different doses has been studied for reducing blood loss and transfusion rates.",
+      "source_ids": ["NCT02229513", "NCT02780245", "NCT02739815"],
+      "domain": "transfusion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_059",
+      "question": "What is the role of pressure control versus volume control ventilation in pediatrics?",
+      "expected_answer_summary": "Both pressure control (PCV) and volume control (VCV) ventilation are used in pediatric patients. PCV provides decelerating flow with set pressure limits, while VCV guarantees tidal volume delivery. Evidence does not consistently favor one mode; choice depends on clinical scenario and lung mechanics.",
+      "source_ids": ["PMID:40985626"],
+      "domain": "critical_care",
+      "difficulty": "medium"
+    },
+    {
+      "id": "qa_060",
+      "question": "What is the role of complement blockade in sepsis-associated hemolytic uremic syndrome?",
+      "expected_answer_summary": "Terminal complement blockade (e.g., eculizumab) may salvage patients with sepsis-associated atypical HUS by inhibiting membrane attack complex formation. Case reports describe successful treatment when standard sepsis management and plasma exchange are insufficient.",
+      "source_ids": ["PMID:41578542"],
+      "domain": "critical_care",
+      "difficulty": "hard"
     }
   ],
   "metadata": {
-    "total_pairs": 3,
-    "creation_date": "2025-01-01",
-    "domains": ["trauma", "emergency_medicine", "transfusion", "critical_care"],
-    "note": "This is a placeholder. Expand with 50-100 curated clinical Q&A pairs before evaluation."
+    "total_pairs": 60,
+    "domains": ["trauma", "transfusion", "critical_care", "emergency_medicine", "fda_regulatory", "out_of_domain"],
+    "difficulties": ["easy", "medium", "hard"],
+    "note": "Q&A pairs grounded in actual corpus documents (854 docs: 623 PubMed, 226 ClinicalTrials.gov, 5 FDA guidance). Source IDs reference real documents in the database."
   }
 }

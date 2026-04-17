@@ -178,7 +178,11 @@ def main():
     )
 
     query_processor = QueryProcessor()
-    guardrails = SafetyGuardrails(confidence_threshold=0.7, grounding_threshold=0.4)
+    guardrails = SafetyGuardrails(
+        confidence_threshold=0.7,
+        grounding_threshold=0.50,
+        embedding_model=embedding_model,
+    )
 
     # ── 4. Build pipeline ─────────────────────────────────────────────────
     print(hr("4. RAG PIPELINE"))
