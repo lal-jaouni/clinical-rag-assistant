@@ -64,11 +64,11 @@ class VectorStore:
                 d.title,
                 d.year,
                 d.url,
-                1 - (c.embedding <=> :vec::vector) AS score
+                1 - (c.embedding <=> CAST(:vec AS vector)) AS score
             FROM chunks c
             JOIN documents d ON d.id = c.document_id
             WHERE {where_sql}
-            ORDER BY c.embedding <=> :vec::vector
+            ORDER BY c.embedding <=> CAST(:vec AS vector)
             LIMIT :top_k
         """)
         params["vec"] = vec_literal

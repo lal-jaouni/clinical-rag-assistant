@@ -12,7 +12,7 @@ llm:
   #   openai/gpt-4o-mini                       (requires OPENAI_API_KEY)
   #   groq/llama-3.1-70b-versatile             (requires GROQ_API_KEY)
   # Override via LLM_MODEL env var in .env.
-  model: "ollama/biomistral:7b"
+  model: "ollama/llama3.1:8b"
   temperature: 0.1  # low for clinical safety (less variance in answers)
   max_tokens: 500
   top_p: 0.9
