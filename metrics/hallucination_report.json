@@ -1,0 +1,8 @@
+{
+  "total_evaluations": 0,
+  "hallucination_rate": 0.0,
+  "hallucinating_count": 0,
+  "target_rate": 0.02,
+  "meets_target": true,
+  "evaluations": []
+}

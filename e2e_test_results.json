@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-04-17 09:01:55",
+  "total_time_s": 584.51,
+  "passed": 5,
+  "failed": 0,
+  "total": 5,
+  "avg_latency_s": 66.63,
+  "avg_confidence": 0.476,
+  "avg_grounding": 0.235,
+  "queries": [
+    {
+      "query": "What triggers activation of a massive transfusion protocol?",
+      "description": "Core clinical question -- should retrieve MTP-related chunks",
+      "status": "PASS",
+      "issues": [],
+      "latency_s": 70.6,
+      "confidence": 0.71,
+      "grounding_score": 0.041,
+      "is_safe": false,
+      "num_sources": 5,
+      "cited_indices": [],
+      "override_reason": "grounding 0.04 < threshold 0.4",
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    },
+    {
+      "query": "What is the role of tranexamic acid in trauma?",
+      "description": "TXA in trauma -- should have good PubMed coverage",
+      "status": "PASS",
+      "issues": [],
+      "latency_s": 56.45,
+      "confidence": 0.771,
+      "grounding_score": 0.285,
+      "is_safe": false,
+      "num_sources": 5,
+      "cited_indices": [],
+      "override_reason": "grounding 0.29 < threshold 0.4",
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    },
+    {
+      "query": "What are the FDA requirements for AI-based medical devices?",
+      "description": "FDA SaMD -- should retrieve FDA guidance chunks",
+      "status": "PASS",
+      "issues": [],
+      "latency_s": 75.84,
+      "confidence": 0.3,
+      "grounding_score": 0.305,
+      "is_safe": true,
+      "num_sources": 5,
+      "cited_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "override_reason": null,
+      "answer_preview": "The available sources do not provide a comprehensive overview of the FDA's requirements for AI-based medical devices. However, they offer some insights into the regulatory framework and guidance docum"
+    },
+    {
+      "query": "What is the recommended ratio of plasma to red blood cells in massive transfusion?",
+      "description": "Plasma:RBC ratios -- quantitative clinical question",
+      "status": "PASS",
+      "issues": [],
+      "latency_s": 84.26,
+      "confidence": 0.3,
+      "grounding_score": 0.33,
+      "is_safe": true,
+      "num_sources": 5,
+      "cited_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "override_reason": null,
+      "answer_preview": "### Answer\nInsufficient evidence in the available sources to answer this question.\n\nThe PATCH-Trauma trial [1] found an association between high ratios of plasma to red cells and lower mortality, but "
+    },
+    {
+      "query": "Tell me about quantum computing applications in cooking",
+      "description": "Out-of-domain query -- should return no sources or low confidence",
+      "status": "PASS",
+      "issues": [],
+      "latency_s": 46.0,
+      "confidence": 0.3,
+      "grounding_score": 0.215,
+      "is_safe": true,
+      "num_sources": 5,
+      "cited_indices": [],
+      "override_reason": null,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. The provided sources do not mention any applications of quantum computing in cooking. They cover topics such as FDA guidelines f"
+    }
+  ]
+}
