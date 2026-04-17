@@ -1,47 +1,99 @@
-"""Clinical-specific prompt templates."""
+"""Clinical-specific prompt templates for RAG generation.
 
-from typing import List, Dict, Any
+Builds system and user prompts that ground LLM responses in retrieved evidence,
+enforce citation discipline, and include few-shot examples for clinical Q&A.
+"""
+
+from __future__ import annotations
+
+from typing import Any
+
+SYSTEM_PROMPT = """\
+You are a clinical research assistant helping healthcare professionals \
+find evidence-based information from medical literature.
+
+RULES — follow every one:
+1. Answer ONLY from the provided source documents. Do not use prior knowledge.
+2. Cite every factual claim with the source tag shown in brackets, e.g. [1], [2].
+3. If the sources do not contain enough information to answer, say \
+"Insufficient evidence in the available sources to answer this question."
+4. Never give direct patient-care instructions (e.g. "give the patient …"). \
+Instead, summarise what the literature reports.
+5. Note any conflicts or limitations across sources.
+6. Be concise — clinicians need actionable summaries, not essays."""
+
+FEW_SHOT_EXAMPLES = """\
+--- Example 1 ---
+Question: What triggers activation of a massive transfusion protocol?
+Sources:
+[1] (PMID 29451243 — MTP Guidelines, 2020) "Massive transfusion protocol \
+is activated when a patient requires more than 10 units of packed red blood \
+cells within 24 hours."
+[2] (PMID 30120987 — Trauma Resuscitation, 2019) "Clinical triggers include \
+systolic BP <90 mmHg, heart rate >120, and an Assessment of Blood Consumption \
+(ABC) score ≥ 2."
+
+Answer: Massive transfusion protocol (MTP) activation criteria include \
+requirement of >10 units pRBCs in 24 hours [1] and clinical triggers such as \
+SBP <90 mmHg, HR >120, or ABC score ≥ 2 [2]. Institutional protocols may vary.
+
+--- Example 2 ---
+Question: Should I give my patient TXA after a car accident?
+Sources:
+[1] (PMID 31200456 — TXA in Trauma, 2021) "Tranexamic acid administered \
+within 3 hours of injury reduces mortality in hemorrhagic shock."
+
+Answer: I cannot provide direct patient-care instructions. The literature \
+reports that tranexamic acid (TXA) administered within 3 hours of injury \
+is associated with reduced mortality in hemorrhagic shock [1]. Clinical \
+decisions should follow your institution's MTP protocol and current \
+ATLS/TCCC guidelines."""
 
 
-class PromptTemplates:
-    """Clinical RAG prompt templates with safety guardrails."""
+def format_source_block(chunks: list[dict[str, Any]]) -> str:
+    """Format retrieved chunks into a numbered source block for the prompt.
 
-    @staticmethod
-    def system_prompt() -> str:
-        """System prompt for clinical safety."""
-        return """You are a clinical research assistant helping healthcare professionals find evidence-based information.
+    Each chunk dict should have at minimum: text.
+    Optional keys used for richer citations: source_type, source_id, title, year.
+    """
+    lines: list[str] = []
+    for idx, chunk in enumerate(chunks, 1):
+        # Build a short header: "(source_type source_id — title, year)"
+        parts: list[str] = []
+        stype = chunk.get("source_type", "")
+        sid = chunk.get("source_id", "")
+        if stype and sid:
+            label = f"PMID {sid}" if stype == "pubmed" else f"{stype.upper()} {sid}"
+            parts.append(label)
+        title = chunk.get("title", "")
+        year = chunk.get("year")
+        if title:
+            parts.append(title + (f", {year}" if year else ""))
+        header = f" ({' — '.join(parts)})" if parts else ""
 
-Your responsibilities:
-1. Answer clinical questions based ONLY on provided source documents
-2. Always cite the source (PubMed ID, FDA document, etc.) for every fact
-3. Never provide direct medical advice to patients
-4. If you are uncertain, say "I don't know" rather than guessing
-5. Highlight any limitations or conflicts in the evidence
-6. Keep responses concise and actionable for clinicians
+        lines.append(f"[{idx}]{header} \"{chunk['text']}\"")
 
-Remember: You support clinical decision-making, not clinical practice."""
+    return "\n".join(lines)
 
-    @staticmethod
-    def query_prompt(query: str, context: List[Dict[str, Any]]) -> str:
-        """Generate prompt for a clinical query with context.
 
-        Args:
-            query: Clinical question
-            context: List of retrieved document chunks
+def build_user_prompt(query: str, chunks: list[dict[str, Any]]) -> str:
+    """Assemble the full user-turn prompt with sources and question."""
+    source_block = format_source_block(chunks)
+    return (
+        f"{FEW_SHOT_EXAMPLES}\n\n"
+        f"--- Now answer the following ---\n"
+        f"Sources:\n{source_block}\n\n"
+        f"Question: {query}\n"
+        f"Answer:"
+    )
 
-        Returns:
-            Formatted prompt string
-        """
-        # Implementation placeholder
-        pass
 
-    @staticmethod
-    def few_shot_examples() -> str:
-        """Few-shot examples for clinical Q&A with citations."""
-        return """Example 1:
-Q: What is the mortality rate in hemorrhagic shock?
-A: Mortality in hemorrhagic shock varies by severity. Class III hemorrhage (loss of 30-40% blood volume) has estimated mortality of 20-40%, while Class IV (>40% loss) approaches 50-100% without rapid intervention [PMID: 12345678]. Early recognition and source control are critical.
-
-Example 2:
-Q: Can I give adrenaline to a patient in cardiac arrest?
-A: I cannot provide direct medical advice to patients. For cardiac arrest management, refer to current ACLS guidelines and your institution's protocols. The research literature supports epinephrine in specific scenarios [PMID: 87654321], but dosing and timing must follow established protocols."""
+def build_messages(
+    query: str,
+    chunks: list[dict[str, Any]],
+) -> list[dict[str, str]]:
+    """Return the full message list ready for an LLM chat-completion call."""
+    return [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": build_user_prompt(query, chunks)},
+    ]
