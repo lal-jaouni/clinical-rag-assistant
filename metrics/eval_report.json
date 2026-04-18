@@ -1,0 +1,436 @@
+{
+  "timestamp": "2026-04-17T11:19:15",
+  "total_time_s": 0.0,
+  "num_questions": 60,
+  "num_answered": 0,
+  "num_errors": 0,
+  "domain_filter": null,
+  "ragas": {},
+  "hallucination_rate": 0.0,
+  "meets_hallucination_target": true,
+  "avg_confidence": 0.0,
+  "avg_grounding": 0.0,
+  "avg_latency_s": 0.0,
+  "per_question": [
+    {
+      "id": "qa_001",
+      "question": "What triggers activation of a massive transfusion protocol?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_002",
+      "question": "What is the recommended plasma to red blood cell ratio in massive transfusion?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_003",
+      "question": "What is the role of tranexamic acid in trauma hemorrhage?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_004",
+      "question": "What is the evidence for prehospital tranexamic acid in traumatic brain injury?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_005",
+      "question": "How does viscoelastic hemostatic assay-guided transfusion compare to conventional coagulation testing?",
+      "domain": "transfusion",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_006",
+      "question": "What is the role of fibrinogen concentrate in trauma hemorrhage?",
+      "domain": "transfusion",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_007",
+      "question": "What are the benefits of whole blood resuscitation in trauma?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_008",
+      "question": "What is hypotensive resuscitation in hemorrhagic shock?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_009",
+      "question": "What is REBOA and when is it indicated?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_010",
+      "question": "What is the role of vasopressin in hemorrhagic shock?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_011",
+      "question": "How does direct peritoneal resuscitation work in damage control surgery?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_012",
+      "question": "What is the mortality rate in hemorrhagic shock by classification?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_013",
+      "question": "What is the lethal triad in trauma?",
+      "domain": "trauma",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_014",
+      "question": "What is damage control orthopedics versus early total care?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_015",
+      "question": "What is the role of lactate in predicting traumatic coagulopathy?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_016",
+      "question": "What are the effects of freeze-dried plasma in prehospital care?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_017",
+      "question": "How does prehospital intubation affect mortality in hemorrhagic shock?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_018",
+      "question": "What is the impact of the ABC-Resuscitation sequence in prehospital trauma?",
+      "domain": "emergency_medicine",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_019",
+      "question": "What is protective mechanical ventilation in ARDS?",
+      "domain": "critical_care",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_020",
+      "question": "What is mechanical power in ventilation and why does it matter?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_021",
+      "question": "What is the role of ECMO in acute respiratory failure?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_022",
+      "question": "What is the optimal ventilation strategy for patients with acute brain injury?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_023",
+      "question": "What is the role of thromboelastography in septic shock?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_024",
+      "question": "What is the management approach for septic shock?",
+      "domain": "critical_care",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_025",
+      "question": "Should vasopressors or advanced airway management come first in cardiac arrest?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_026",
+      "question": "What is the fluid management approach in sepsis?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_027",
+      "question": "What is the FDA framework for AI/ML-based software as a medical device?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_028",
+      "question": "What are predetermined change control plans for ML-enabled medical devices?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_029",
+      "question": "What are the Good Machine Learning Practice principles for medical devices?",
+      "domain": "fda_regulatory",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_030",
+      "question": "How does the FDA define clinical decision support software?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_031",
+      "question": "What is the FDA approach to clinical evaluation of SaMD?",
+      "domain": "fda_regulatory",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_032",
+      "question": "What is the evidence for topical tranexamic acid in surgical bleeding?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_033",
+      "question": "What is the tranexamic acid mechanism and pharmacokinetics in trauma?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_034",
+      "question": "How are frozen red blood cells used in trauma transfusion?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_035",
+      "question": "What is the relationship between whole blood storage duration and hemostatic function?",
+      "domain": "transfusion",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_036",
+      "question": "What are effective approaches to noncompressible torso hemorrhage?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_037",
+      "question": "What is the role of walking blood banks in austere environments?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_038",
+      "question": "How does hypothermia after cardiac arrest affect neurological outcomes?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_039",
+      "question": "What is the relationship between endotracheal intubation and laryngeal tube in cardiac arrest outcomes?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_040",
+      "question": "What is the role of lactate clearance in predicting massive transfusion needs?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_041",
+      "question": "How do antibiotic concentrations change during massive transfusion?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_042",
+      "question": "What is the abdominal compartment syndrome and how is it prevented during resuscitation?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_043",
+      "question": "What is the DIC score and its role in sepsis management?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_044",
+      "question": "What are the effects of mechanical ventilation on the extracellular matrix?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_045",
+      "question": "What mobile applications exist for trauma care decision support?",
+      "domain": "emergency_medicine",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_046",
+      "question": "What is the role of platelet aggregation monitoring in critically ill patients?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_047",
+      "question": "How is low-volume resuscitation being developed for prehospital hemorrhagic shock?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_048",
+      "question": "What is the FAST protocol in emergency ultrasound?",
+      "domain": "emergency_medicine",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_049",
+      "question": "What is the role of remote ischemic conditioning in trauma?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_050",
+      "question": "What is the role of the caval index in assessing volume status?",
+      "domain": "emergency_medicine",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_051",
+      "question": "Tell me about quantum computing applications in cooking",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_052",
+      "question": "What is the best cryptocurrency to invest in right now?",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_053",
+      "question": "Can you write me a poem about flowers?",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_054",
+      "question": "What is the role of subcutaneous lactate monitoring in trauma?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_055",
+      "question": "What is the optimal expiratory duration in mechanical ventilation?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_056",
+      "question": "What are the indications for massive transfusion protocol in non-trauma patients?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_057",
+      "question": "What is the evidence for early vasopressor use in hemorrhagic shock?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_058",
+      "question": "How does tranexamic acid reduce blood loss in cesarean delivery?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_059",
+      "question": "What is the role of pressure control versus volume control ventilation in pediatrics?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "dry_run"
+    },
+    {
+      "id": "qa_060",
+      "question": "What is the role of complement blockade in sepsis-associated hemolytic uremic syndrome?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "dry_run"
+    }
+  ]
+}

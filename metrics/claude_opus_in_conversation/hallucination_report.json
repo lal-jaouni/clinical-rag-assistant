@@ -1,0 +1,242 @@
+{
+  "total_evaluations": 12,
+  "hallucination_rate": 0.1667,
+  "hallucinating_count": 2,
+  "target_rate": 0.02,
+  "meets_target": false,
+  "evaluations": [
+    {
+      "answer_preview": "Massive transfusion protocol (MTP) is activated when a patient requires more than 10 units of packed red blood cells within 24 hours, which is the most common definition of massive transfusion [1]. MT",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.2,
+        "flagged_facts": [
+          "MTP activation is triggered in the setting of acute hemorrhage requiring rapid administration of blood products in specific ratios"
+        ],
+        "overall_grounding": 0.806,
+        "sentence_scores": [
+          0.7895,
+          0.6923,
+          1.0,
+          0.8571,
+          0.7692
+        ]
+      }
+    },
+    {
+      "answer_preview": "Current evidence supports a high ratio of plasma to red blood cells in trauma resuscitation. Plasma transfusion is recommended as an initial intervention in most major hemorrhage protocols [1]. The PR",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.0,
+        "flagged_facts": [],
+        "overall_grounding": 0.8507,
+        "sentence_scores": [
+          0.8182,
+          1.0,
+          0.9565,
+          0.7143,
+          0.7273
+        ]
+      }
+    },
+    {
+      "answer_preview": "Tranexamic acid (TXA) is an established antifibrinolytic agent in the treatment of bleeding trauma patients [1]. TXA inhibits plasminogen activation and plasmin, thereby retarding clot disintegration ",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.0,
+        "flagged_facts": [],
+        "overall_grounding": 0.8721,
+        "sentence_scores": [
+          1.0,
+          0.7778,
+          0.9333,
+          1.0,
+          0.8696,
+          0.7059
+        ]
+      }
+    },
+    {
+      "answer_preview": "The evidence for prehospital tranexamic acid (TXA) in traumatic brain injury (TBI) comes from several clinical trials. The STAAMP trial evaluated whether 1 gram of prehospital TXA during emergency med",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.0,
+        "flagged_facts": [],
+        "overall_grounding": 0.8913,
+        "sentence_scores": [
+          0.9231,
+          0.8947,
+          0.9444,
+          0.9286,
+          0.8824,
+          0.7273
+        ]
+      }
+    },
+    {
+      "answer_preview": "Direct peritoneal resuscitation (DPR) is a technique used as an adjunct to damage control laparotomy (DCL) in critically ill surgical patients. In DPR, the open abdomen is continuously irrigated with ",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.2857142857142857,
+        "flagged_facts": [
+          "This approach has been shown to improve abdominal closure rates and decrease wound complications",
+          "Excessive perioperative crystalloid use remains a concern in the context of damage control laparotomy and resuscitation"
+        ],
+        "overall_grounding": 0.8276,
+        "sentence_scores": [
+          0.9333,
+          1.0,
+          0.5556,
+          0.7857,
+          0.8667,
+          0.9286,
+          0.6364
+        ]
+      }
+    },
+    {
+      "answer_preview": "Lactate and base deficit serve as important predictors of traumatic coagulopathy. A study comparing the predictive value of lactate level and base deficit found both to be independent risk factors for",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.16666666666666666,
+        "flagged_facts": [
+          "Lactate and base deficit serve as important predictors of traumatic coagulopathy"
+        ],
+        "overall_grounding": 0.8235,
+        "sentence_scores": [
+          0.625,
+          0.8889,
+          0.9167,
+          0.8824,
+          0.7368,
+          0.8182
+        ]
+      }
+    },
+    {
+      "answer_preview": "Prehospital intubation in hemorrhagic shock after severe trauma is associated with important mortality considerations. A propensity-matched study assessed the association of intubation timing (prehosp",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.14285714285714285,
+        "flagged_facts": [
+          "Research into respiratory support during endotracheal intubation aims to evaluate the benefits and harms of different approaches"
+        ],
+        "overall_grounding": 0.8077,
+        "sentence_scores": [
+          0.8,
+          0.875,
+          1.0,
+          0.8,
+          0.7143,
+          0.6364,
+          0.9091
+        ]
+      }
+    },
+    {
+      "answer_preview": "The modified ABC-Resuscitation sequence in prehospital trauma represents a shift from traditional assessment. Traditional trauma assessment follows the ABC (airway, breathing, circulation) sequence, b",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.0,
+        "flagged_facts": [],
+        "overall_grounding": 0.9036,
+        "sentence_scores": [
+          0.8,
+          0.9524,
+          0.9524,
+          0.9286,
+          0.8235
+        ]
+      }
+    },
+    {
+      "answer_preview": "The FDA has developed a regulatory framework for AI/ML-based Software as a Medical Device (SaMD) through its AI/ML SaMD Action Plan [1]. The FDA's vision recognizes that AI/ML technologies have an app",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.14285714285714285,
+        "flagged_facts": [
+          "(3) a transparency initiative for AI/ML-based devices"
+        ],
+        "overall_grounding": 0.7733,
+        "sentence_scores": [
+          1.0,
+          0.7647,
+          0.7222,
+          0.7273,
+          0.5,
+          0.75,
+          0.7778
+        ]
+      }
+    },
+    {
+      "answer_preview": "Predetermined Change Control Plans (PCCPs) are a regulatory mechanism that allows manufacturers of ML-enabled medical devices to describe planned modifications and the methodology to implement them [5",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.5714285714285714,
+        "flagged_facts": [
+          "Key elements of a PCCP include: specification of assessment metrics and evaluation methods",
+          "reference standards used during training, tuning, and testing",
+          "and Good Machine Learning Practice (GMLP) principles ensuring ML-enabled devices are safe and effective over the device lifecycle",
+          "The FDA has published final guidance on PCCPs for ML-enabled medical devices"
+        ],
+        "overall_grounding": 0.75,
+        "sentence_scores": [
+          0.7222,
+          0.85,
+          0.6667,
+          0.5,
+          0.6923,
+          0.8889,
+          0.625
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. The provided sources cover topics related to AI/ML-based medical devices, clinical decision support software, and trauma resusci",
+      "is_hallucinating": true,
+      "details": {
+        "is_hallucinating": true,
+        "hallucination_rate": 1.0,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "The provided sources cover topics related to AI/ML-based medical devices, clinical decision support software, and trauma resuscitation, but contain no information about quantum computing applications in cooking"
+        ],
+        "overall_grounding": 0.3462,
+        "sentence_scores": [
+          0.0,
+          0.45
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. The provided sources are clinical and regulatory documents related to trauma care, transfusion medicine, and medical device regu",
+      "is_hallucinating": true,
+      "details": {
+        "is_hallucinating": true,
+        "hallucination_rate": 1.0,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "The provided sources are clinical and regulatory documents related to trauma care, transfusion medicine, and medical device regulation",
+          "They contain no information about cryptocurrency investments"
+        ],
+        "overall_grounding": 0.4583,
+        "sentence_scores": [
+          0.1667,
+          0.6154,
+          0.4
+        ]
+      }
+    }
+  ]
+}

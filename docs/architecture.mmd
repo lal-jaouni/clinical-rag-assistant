@@ -1,0 +1,71 @@
+graph LR
+    subgraph Ingestion
+        PM[PubMed<br/>Entrez API]
+        FDA[FDA SaMD<br/>Guidance PDFs]
+        CT[ClinicalTrials.gov<br/>API]
+    end
+
+    subgraph Processing
+        CH[Chunker<br/>512 tok / 50% overlap]
+        EMB[PubMedBERT<br/>Embeddings]
+    end
+
+    subgraph Storage
+        PG[(PostgreSQL<br/>+ pgvector)]
+        BM[BM25 Index]
+    end
+
+    subgraph Retrieval
+        QP[Query Processor<br/>Abbreviation Expansion]
+        VS[Vector Search<br/>60% weight]
+        KW[BM25 Search<br/>40% weight]
+        RRF[Reciprocal Rank<br/>Fusion]
+    end
+
+    subgraph Generation
+        LLM[Ollama LLM<br/>Llama 3.1 8B]
+        SG[Safety Guardrails<br/>4-Layer Pipeline]
+    end
+
+    subgraph Safety["Safety Guardrails (4 Layers)"]
+        S1[Confidence<br/>Thresholding]
+        S2[Source<br/>Grounding]
+        S3[Hallucination<br/>Detection]
+        S4[Direct Advice<br/>Filtering]
+    end
+
+    subgraph Output
+        ANS[Answer +<br/>Citations]
+        SC[Source Cards<br/>with Links]
+        CM[Confidence<br/>Metrics]
+    end
+
+    PM --> CH
+    FDA --> CH
+    CT --> CH
+    CH --> EMB
+    EMB --> PG
+    CH --> BM
+
+    QP --> VS
+    QP --> KW
+    VS --> RRF
+    KW --> RRF
+    PG -.-> VS
+    BM -.-> KW
+
+    RRF --> LLM
+    LLM --> SG
+    SG --> S1 --> S2 --> S3 --> S4
+
+    S4 --> ANS
+    S4 --> SC
+    S4 --> CM
+
+    style Safety fill:#fff3e0,stroke:#e65100
+    style Ingestion fill:#e3f2fd,stroke:#1565c0
+    style Processing fill:#e8f5e9,stroke:#2e7d32
+    style Storage fill:#f3e5f5,stroke:#6a1b9a
+    style Retrieval fill:#fff8e1,stroke:#f57f17
+    style Generation fill:#fce4ec,stroke:#c62828
+    style Output fill:#e0f7fa,stroke:#00838f

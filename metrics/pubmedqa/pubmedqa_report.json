@@ -1,0 +1,265 @@
+{
+  "benchmark": "PubMedQA (PQA-L, expert-labeled)",
+  "mode": "generation_only",
+  "model": "ollama/llama3.1:8b",
+  "timestamp": "2026-04-17T20:13:51",
+  "total_time_s": 221.98,
+  "num_questions": 10,
+  "num_answered": 10,
+  "num_errors": 0,
+  "accuracy": {
+    "overall": 0.1,
+    "correct": 1,
+    "total": 10,
+    "by_label": {
+      "yes": {
+        "total": 5,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "no": {
+        "total": 4,
+        "correct": 0,
+        "accuracy": 0.0
+      },
+      "maybe": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 1.0
+      }
+    },
+    "confusion_matrix": {
+      "yes": {
+        "yes": 0,
+        "no": 0,
+        "maybe": 5
+      },
+      "no": {
+        "yes": 0,
+        "no": 0,
+        "maybe": 4
+      },
+      "maybe": {
+        "yes": 0,
+        "no": 0,
+        "maybe": 1
+      }
+    }
+  },
+  "ragas": {
+    "faithfulness": 0.2422,
+    "answer_relevance": 0.4766,
+    "context_precision": 0.4667,
+    "num_questions": 10,
+    "per_question": [
+      {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.0,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.0,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.0,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.4769,
+        "answer_relevance": 0.8571,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.0538,
+        "answer_relevance": 0.0,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.6028,
+        "answer_relevance": 1.0,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.5058,
+        "answer_relevance": 0.9091,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3088,
+        "answer_relevance": 1.0,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.4738,
+        "answer_relevance": 1.0,
+        "context_precision": 0.6667
+      },
+      {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.0,
+        "context_precision": 0.0
+      }
+    ]
+  },
+  "hallucination_rate": 0.5,
+  "meets_hallucination_target": false,
+  "safety_override_rate": 0.5,
+  "avg_confidence": 0.5186,
+  "avg_grounding": 0.2621,
+  "avg_latency_s": 22.2,
+  "per_question": [
+    {
+      "id": "pqa_21645374",
+      "question": "Do mitochondria play a role in remodelling lace plant leaves during programmed cell death?",
+      "status": "ok",
+      "expected_label": "yes",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.7568181818181818,
+      "grounding_score": 0.22727272727272727,
+      "is_safe": false,
+      "override_reason": "grounding 0.23 < threshold 0.5",
+      "is_hallucinating": true,
+      "latency_s": 22.13,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    },
+    {
+      "id": "pqa_16418930",
+      "question": "Landolt C and snellen e acuity: differences in strabismus amblyopia?",
+      "status": "ok",
+      "expected_label": "no",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.7878378378378379,
+      "grounding_score": 0.35135135135135137,
+      "is_safe": false,
+      "override_reason": "grounding 0.35 < threshold 0.5",
+      "is_hallucinating": true,
+      "latency_s": 15.31,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    },
+    {
+      "id": "pqa_9488747",
+      "question": "Syncope during bathing in infants, a pediatric form of water-induced urticaria?",
+      "status": "ok",
+      "expected_label": "yes",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.7337078651685394,
+      "grounding_score": 0.1348314606741573,
+      "is_safe": false,
+      "override_reason": "grounding 0.13 < threshold 0.5",
+      "is_hallucinating": true,
+      "latency_s": 25.23,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    },
+    {
+      "id": "pqa_17208539",
+      "question": "Are the long-term results of the transanal pull-through equal to those of the transabdominal pull-through?",
+      "status": "ok",
+      "expected_label": "no",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.3,
+      "grounding_score": 0.24528301886792453,
+      "is_safe": true,
+      "override_reason": null,
+      "is_hallucinating": false,
+      "latency_s": 20.97,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources [1] and [3] report on the comparison of long-term outcomes between transanal endorectal pull-through (TERPT) and conventional transabdominal (ABD) pull-through for Hirschsprung disease. However, they presen"
+    },
+    {
+      "id": "pqa_10808977",
+      "question": "Can tailored interventions increase mammography use among HMO women?",
+      "status": "ok",
+      "expected_label": "yes",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.6564814814814816,
+      "grounding_score": 0.42592592592592593,
+      "is_safe": false,
+      "override_reason": "confidence 0.66 < threshold 0.7",
+      "is_hallucinating": true,
+      "latency_s": 13.16,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    },
+    {
+      "id": "pqa_23831910",
+      "question": "Double balloon enteroscopy: is it efficacious and safe in a community setting?",
+      "status": "ok",
+      "expected_label": "yes",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.3,
+      "grounding_score": 0.4256198347107438,
+      "is_safe": true,
+      "override_reason": null,
+      "is_hallucinating": false,
+      "latency_s": 40.18,
+      "answer_preview": "Double balloon enteroscopy (DBE) appears to be efficacious and safe in a community setting, as reported by two studies.\n\nThe first study [1] indicates that DBE procedures were performed on 66 patients between March 2007 and January 2011. The indications for the procedure included evaluation of anemi"
+    },
+    {
+      "id": "pqa_26037986",
+      "question": "30-Day and 1-year mortality in emergency general surgery laparotomies: an area of concern and need for improvement?",
+      "status": "ok",
+      "expected_label": "maybe",
+      "predicted_label": "maybe",
+      "is_correct": true,
+      "confidence": 0.3,
+      "grounding_score": 0.2627118644067797,
+      "is_safe": true,
+      "override_reason": null,
+      "is_hallucinating": false,
+      "latency_s": 21.32,
+      "answer_preview": "Emergency surgery, specifically emergency laparotomy, is associated with poorer outcomes and higher mortality rates compared to non-emergency surgery.\n\nThe available sources report the following mortality rates:\n- 30-day mortality: 14-15% [1], specifically 12.4% in those aged <70 years and 22% in th"
+    },
+    {
+      "id": "pqa_26852225",
+      "question": "Is adjustment for reporting heterogeneity necessary in sleep disorders?",
+      "status": "ok",
+      "expected_label": "no",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.3,
+      "grounding_score": 0.14173228346456693,
+      "is_safe": true,
+      "override_reason": null,
+      "is_hallucinating": false,
+      "latency_s": 22.44,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe sources describe the use of anchoring vignettes and statistical models (ordered probit model and CHOPIT) to adjust for reporting heterogeneity, but they do not provide a clear conclusion on whether adjustment is necessary. "
+    },
+    {
+      "id": "pqa_17113061",
+      "question": "Do mutations causing low HDL-C promote increased carotid intima-media thickness?",
+      "status": "ok",
+      "expected_label": "no",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.3,
+      "grounding_score": 0.20270270270270271,
+      "is_safe": true,
+      "override_reason": null,
+      "is_hallucinating": false,
+      "latency_s": 12.3,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources discuss the relationship between genetic HDL deficiency states and coronary heart disease, as well as carotid intima-media thickness measurements in cases with different mutations. However, they do not dire"
+    },
+    {
+      "id": "pqa_10966337",
+      "question": "A short stay or 23-hour ward in a general and academic children's hospital: are they effective?",
+      "status": "ok",
+      "expected_label": "yes",
+      "predicted_label": "maybe",
+      "is_correct": false,
+      "confidence": 0.750925925925926,
+      "grounding_score": 0.2037037037037037,
+      "is_safe": false,
+      "override_reason": "grounding 0.20 < threshold 0.5",
+      "is_hallucinating": true,
+      "latency_s": 28.95,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    }
+  ]
+}

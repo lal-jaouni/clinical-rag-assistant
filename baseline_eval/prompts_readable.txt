@@ -1,0 +1,256 @@
+======================================================================
+QUERY 1: What triggers activation of a massive transfusion protocol?
+======================================================================
+
+SYSTEM PROMPT:
+You are a clinical research assistant helping healthcare professionals find evidence-based information from medical literature.
+
+RULES — follow every one:
+1. Answer ONLY from the provided source documents. Do not use prior knowledge.
+2. Cite every factual claim with the source tag shown in brackets, e.g. [1], [2].
+3. If the sources do not contain enough information to answer, say "Insufficient evidence in the available sources to answer this question."
+4. Never give direct patient-care instructions (e.g. "give the patient …"). Instead, summarise what the literature reports.
+5. Note any conflicts or limitations across sources.
+6. Be concise — clinicians need actionable summaries, not essays.
+
+USER PROMPT:
+--- Example 1 ---
+Question: What triggers activation of a massive transfusion protocol?
+Sources:
+[1] (PMID 29451243 — MTP Guidelines, 2020) "Massive transfusion protocol is activated when a patient requires more than 10 units of packed red blood cells within 24 hours."
+[2] (PMID 30120987 — Trauma Resuscitation, 2019) "Clinical triggers include systolic BP <90 mmHg, heart rate >120, and an Assessment of Blood Consumption (ABC) score ≥ 2."
+
+Answer: Massive transfusion protocol (MTP) activation criteria include requirement of >10 units pRBCs in 24 hours [1] and clinical triggers such as SBP <90 mmHg, HR >120, or ABC score ≥ 2 [2]. Institutional protocols may vary.
+
+--- Example 2 ---
+Question: Should I give my patient TXA after a car accident?
+Sources:
+[1] (PMID 31200456 — TXA in Trauma, 2021) "Tranexamic acid administered within 3 hours of injury reduces mortality in hemorrhagic shock."
+
+Answer: I cannot provide direct patient-care instructions. The literature reports that tranexamic acid (TXA) administered within 3 hours of injury is associated with reduced mortality in hemorrhagic shock [1]. Clinical decisions should follow your institution's MTP protocol and current ATLS/TCCC guidelines.
+
+--- Now answer the following ---
+Sources:
+[1] (PMID 40580496 — Resuscitating massive transfusion knowledge: An update for the pharmacist., 2025) "To review the indications, components, complications, and adjunctive medications associated with massive transfusion and implications for the clinical pharmacist. Massive transfusion is a medical emergency and comprises the administration of various blood products in specific ratios to the acutely hemorrhaging patient. Definitions of massive transfusion vary, with the most common being the administration of 10 or more units of red blood cells within 24 hours. Complications associated with massive transfusion include electrolyte abnormalities and cardiopulmonary reactions. Adjunctive medications may be used during massive transfusion, including supplementation with intravenous calcium and administration of tranexamic acid, when indicated. Emergency medicine and critical care pharmacists must be well versed in the art of massive transfusion as they are an active participant during bedside resuscitation. Hemorrhage is a common complication due to traumatic injury, with patients receiving blood products for resuscitation. Massive transfusion protocols may be initiated in this patient population. Pharmacists participating in the management of resuscitation must be knowledgeable about managing complications of massive transfusion and on the use of adjunctive pharmacotherapy."
+[2] (FDA pccp-final-2024 — Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices, 2024) "of the AI-DSF that will be modified, is AI model re-training needed to achieve the modifications specified in the PCCP? 2.a.4. If re-training applies to only certain parts of the AI-DSF, what are the plans to ensure that other functions or software components are not affected? b. Re-training implementation: 2.b.1. What are the triggers for re-training (e.g., when new data reaches a certain size, when a drift is observed, periodically in time)? 2.b.2. What strategies will be employed to identify and limit overfitting? 2.b.3. Are there risks related to AI model bias introduced by re-training a modified AI model, and if so, what are planned mitigations? (3) Performance Evaluation a. Triggers to initiate performance evaluation 3.a.1. What are the triggers for initiating performance evaluation of a re-trained AI model or modified AI-DSF (e.g., re-training shows a certain performance level on the training or tuning data, test data reaches a certain size, periodically in time)? 3.a.2. How frequently is this expected to occur? b. Assessment metrics and elements 3.b.1. How are the plans for data management in (1) above applied to produce the test data for performance evaluation that are different from any training or tuning data? 3.b.2."
+[3] (PMID 40608534 — The impact of transfusion kinetics on the inflammatory response following major injury., 2024) "The innate immune response is activated by tissue injury and may quickly become dysregulated in the setting of major trauma. Cytokines are a key component of this response and function to activate and mobilize neutrophils, macrophages, and natural killer cells. The purpose of this study was to understand how the kinetics of blood-based resuscitation may impact the cytokine response. Specifically, we hypothesize that transfusion kinetics make a fundamental contribution to the inflammatory response, beyond the volume of transfusion and injury severity. The Pragmatic, Randomized Optimal Platelet and Plasma Ratio data set was used in this retrospective analysis. Transfusion kinetics were quantified by calculating the total critical administration threshold episodes in three time periods, 1 to 2 hours following injury, 3 to 4 hours, and 5 to 6 hours following injury. The longitudinal response of key cytokines over 72 hours was assessed with a multivariable linear growth model, using critical administration threshold status as a time-varying covariate. A total of 522 patients were included in this analysis. Pro-inflammatory cytokines interleukin (IL)-6 (p = 0.0354) and IL-8 (p < 0.0001) were significantly increased. Anti-inflammatory cytokines IL-1ra (p = 0.0001) and IL-10 (p < 0.0001) were significantly increased. Chemokines interferon-γ-inducible protein 10 (p = 0.0433), monocyte chemoattractant protein-1 (p = 0.0064), and macrophage inflammatory protein 1β (p = 0.0003) were significantly increased, while regulated up activation, normal T-cell expressed and secreted chemokine (p = 0.0216) was significantly decreased. Growth factors showed no significant response. The kinetics of packed red blood cell transfusion demonstrate a potential association with the expression of cytokines following injury, beyond the total transfusion requirement or the severity of injury. Because cytokines activate and mobilize neutrophils, macrophages, and natural killer cells, these alterations may have a profound effect on degree and coordination of the immune response. As the contribution of various components of major resuscitation to inflammatory activation is clarified, such as types of blood product, tempo of transfusion, and operative care, targets for intervention should become more apparent. Therapeutic/Care Management; Level III."
+[4] (FDA pccp-final-2024 — Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices, 2024) "what should be included in this component of the Modification Protocol will depend on the type of modification and specific device. What manufacturers should include in a submission: Examples of the types of information manufacturers should provide in a Modification Protocol describing their re-training practices are provided in Appendix A. In general, this information should identify the objective of the re- training process, provide a description of the AI model, identify the device components that may be modified, outline the practices that will be followed (e.g., data sequestration strategies during 101 See 21 CFR 820.180(b). 102 For example, FDA has published a document on “Good Machine Learning Practice for Medical Device Development: Guiding Principles.” 26 Contains Nonbinding Recommendations re-training), and identify any triggers for re-training (e.g., when the quantity of new data reaches a certain size or when a drift in data is observed over time)."
+[5] (CLINICAL_TRIALS NCT02416817 — Clinical Trial: Evaluation of 2 Different Protocols of Blood Derivates Transfusion in Acute Trauma Patients in a Brazilian Tertiary Hospital, 2014) "The purpose of this study is to compare two already validated methods for massive transfusion in trauma patients admitted to the emergency room of a large reference hospital.
+
+In this randomized trial trauma patients in need of massive transfusion will be assigned to one of the following transfusion strategies:
+
+1. \- Fresh Frozen Plasma, Platelets Concentrate and Packed red blood cells in 1:1:1 ratio.
+2. \- These patients will receive Red blood cells based on Haemoglobin measurements and will receive either Beriplex® P/N (CSL Behring GmbH, Marburg, Germany) or Haemocomplettan® P (CSL Behring, Marburg, Germany), or Platelets based on thromboelastometry.
+
+To be included patients must meet the following inclusion criteria:
+
+1. \- Trauma victims
+2. \- Adults between 18 - 80 years old
+3. \- Injury Severity Score (ISS) between 15 and 45
+4. \- Assessment of Blood Consumption (ABC) Score ≥ 3 points
+5. \- Shock Index ≥ 1,2
+6. \- Acute hemorrhage of more than 50% estimated blood volume in 3 hours or more than 1,5 ml/kg/min of blood during 20 minutes.
+
+Exclusion Criteria:
+
+1. \- Early cardiac arrest
+2. \- Pregnancy
+3. \- Injury Severity Score (ISS) \> 45
+4. \- Patient transferred from another hospital
+5. \- Drug abuse history
+6. \- Known coagulation impairment
+7. \- Known use of anticoagulants, or platelet antiaggregants.
+
+The group of health-care providers recruiting the patients based on eligibility criteria, is different than the group that evaluates the clinical outcomes of the included patients, in such a way that no researcher is tasked with post-randomisation care of the subjects. This is done to prevent observational bias.
+
+Two informed consent forms are signed for each patient. The first one is signed by an independent physician. Another consent form is signed by the patient's family or the own patient within 24 hours of hospital admission.
+
+The randomisation is performed by sealed envelopes assigned to the eligible patients anytime they reach the protocol criteria. The envelopes were created using a computer generated randomisation table specifically designed to this study.
+
+An interim analysis was performed in October 2015 and it showed that there was no increased mortality or morbidity within the intervention group."
+
+Question: What triggers activation of a massive transfusion protocol?
+Answer:
+
+======================================================================
+QUERY 2: What is the role of tranexamic acid in trauma?
+======================================================================
+
+SYSTEM PROMPT:
+You are a clinical research assistant helping healthcare professionals find evidence-based information from medical literature.
+
+RULES — follow every one:
+1. Answer ONLY from the provided source documents. Do not use prior knowledge.
+2. Cite every factual claim with the source tag shown in brackets, e.g. [1], [2].
+3. If the sources do not contain enough information to answer, say "Insufficient evidence in the available sources to answer this question."
+4. Never give direct patient-care instructions (e.g. "give the patient …"). Instead, summarise what the literature reports.
+5. Note any conflicts or limitations across sources.
+6. Be concise — clinicians need actionable summaries, not essays.
+
+USER PROMPT:
+--- Example 1 ---
+Question: What triggers activation of a massive transfusion protocol?
+Sources:
+[1] (PMID 29451243 — MTP Guidelines, 2020) "Massive transfusion protocol is activated when a patient requires more than 10 units of packed red blood cells within 24 hours."
+[2] (PMID 30120987 — Trauma Resuscitation, 2019) "Clinical triggers include systolic BP <90 mmHg, heart rate >120, and an Assessment of Blood Consumption (ABC) score ≥ 2."
+
+Answer: Massive transfusion protocol (MTP) activation criteria include requirement of >10 units pRBCs in 24 hours [1] and clinical triggers such as SBP <90 mmHg, HR >120, or ABC score ≥ 2 [2]. Institutional protocols may vary.
+
+--- Example 2 ---
+Question: Should I give my patient TXA after a car accident?
+Sources:
+[1] (PMID 31200456 — TXA in Trauma, 2021) "Tranexamic acid administered within 3 hours of injury reduces mortality in hemorrhagic shock."
+
+Answer: I cannot provide direct patient-care instructions. The literature reports that tranexamic acid (TXA) administered within 3 hours of injury is associated with reduced mortality in hemorrhagic shock [1]. Clinical decisions should follow your institution's MTP protocol and current ATLS/TCCC guidelines.
+
+--- Now answer the following ---
+Sources:
+[1] (PMID 41241739 — Tranexamic acid in multiply injured patients-the independent risk of thromboembolic complications with repeated dosing: retrospective analysis based on the TraumaRegister DGU®., 2025) "Tranexamic acid is an established drug in the treatment of bleeding trauma patients. Concerns have been raised over possible complications of tranexamic acid regarding thromboembolic events as serious complications during the treatment of severely injured patients. In our study we retrospectively analyzed data from 2015-2019 of multiply injured patients receiving tranexamic acid during distinguished treatment periods from the TraumaRegister DGU®. We statistically analyzed overall thromboembolic complications during hospital stay in the context of number of single-dose tranexamic acid administrations. We report on 37,342 patients, of whom 1,151 (3.1%) suffered from thromboembolic events. Patients without tranexamic acid treatment suffered from thromboembolic events in 2.3%, prehospital and emergency department administration increased the incidence to 4.8% and 5.2%, respectively. Administering tranexamic acid twice or three times was associated with an increased incidence of 8.5% and 8.2%, respectively. In a multivariate logistic regression, we uniquely show an independently associated risk for thromboembolic complications with every consecutive administration of tranexamic acid (one application: odds ratio (OR) 1.56, p < 0.001; two applications: OR 1.79, p < 0.001; three applications: OR 1.50, p = 0.113). In our study we report on an associated risk of thromboembolic events in multiply injured patients with every single time tranexamic acid was administered in our study. Thus, before a repetitive dose of tranexamic acid is administered checking for indication is advised and especially in multiply injured patients receiving repeated administrations of TXA starting a thromboprophylaxis, as soon as possible after the traumatic bleeding disorder is controlled, is important."
+[2] (CLINICAL_TRIALS NCT06330935 — Clinical Trial Evaluating the Effect of Tranexamic Acid on the Clinical Outcomes in Pediatric Patients With Traumatic Brain Injury, 2024) "Evaluate the effect of tranexamic acid on mortality in pediatric patients with traumatic brain injury. This could potentially lead to improved treatment protocols and better outcomes for this vulnerable population."
+[3] (CLINICAL_TRIALS NCT03101124 — Serum Concentration of Tranexamic Acid After Topical Administration in Massive Weight Loss Skin Reducing Surgery, 2017) "Tranexamic acid is a drug that prevents clotted blood from dissolving and hence reduces bleeding. It is routinely given intravenously in many surgical situations where there is a risk of major bleeding. Concerns regarding possible adverse effects from intravenous use prevents a more widespread use, even in smaller surgeries. Topical application - using the drug directly on the wound surface- may give a higher concentration at the site of bleeding but a lower concentration in the rest of the body, and hence a lower risk of adverse effects. Here it will be investigated to what extent a defined dose of the drug is absorbed systemically - into the blood stream - when it is applied topically. This will then be compared to the concentration in the blood stream when administered intravenously. Blood samples will be obtained at defined time intervals after administration from patients receiving topical and patients receiving intravenous administration of the same single dose of tranexamic acid. Will less of the drug enter the blood stream if it is applied directly to the wound?"
+[4] (PMID 41074177 — Use of tranexamic acid in trauma surgical specialties: a narrative review., 2025) "Tranexamic acid (TXA) is a well-known antifibrinolytic agent with increasing evidence supporting its use in trauma patients. This review evaluates the current available literature regarding TXA and its potential use to improve patient survival and reduce transfusion needs across multiple trauma surgical subspecialties and contexts. A literature review was conducted on the efficacy and safety of tranexamic acid in trauma surgical specialties using PubMed (MEDLINE) and Google Scholar from database inception to October 2024. Selected articles were written in the English language and encompassed reviews, experimental studies, and basic science articles. There is conflicting evidence on the mortality benefit of TXA, particularly in the prehospital setting. However, multiple large, high-quality studies have shown that TXA is an effective agent to reduce bleeding after trauma. Extensive evidence exists that TXA is a safe medication, with numerous studies demonstrating no increased risk of thromboembolic events after administration of TXA in trauma settings. Additionally, multiple cost-effectiveness studies conducted in several countries have found TXA to be a highly cost-effective intervention following trauma. TXA is a safe, effective, and cost-effective medication to reduce bleeding after trauma. Future research on TXA is needed to elucidate the potential benefit of TXA after traumatic brain and spine injury and the optimal dose and route of administration of TXA."
+[5] (CLINICAL_TRIALS NCT03582293 — Tranexamic Acid to Prevent OpeRation in Chronic Subdural Hematoma. A Double-blind, Placebo-controlled, Multicentre, Randomized Controlled Clinical Trial, 2018) "of independency. In a large series of 1205 patients, symptomatic recurrence after surgery was 9%, mortality 2% and unfavourable functional outcome 22%. Outcome measurement Studies evaluating quality of life and functional outcome with cSDH patients are scarce. The modified Rankin Scale (mRS) score is usually the only clinical outcome parameter. A literature search for quality of life in cSDH results in only two clinical studies. The first used the postoperative mRS, Barthel Index and Sickness Impact Profile as outcome measurements; the second used a pre- and postoperative Karnofsky Performance Score. Tranexamic acid As hyperfibrinolysis is thought to play a role in the liquefaction and enlargement of cSDH, pharmaceutical options to block fibrinolysis have been explored in an effort to eliminate the necessity for surgery. The use of tranexamic acid (TXA), an antifibrinolytic drug, has so far been reported in five small series. In the first retrospective series, a total of 21 patients were treated with TXA, of whom three after primary burr hole surgery. In none of these 21 patients, additional surgery was necessary."
+
+Question: What is the role of tranexamic acid in trauma?
+Answer:
+
+======================================================================
+QUERY 3: What are the FDA requirements for AI-based medical devices?
+======================================================================
+
+SYSTEM PROMPT:
+You are a clinical research assistant helping healthcare professionals find evidence-based information from medical literature.
+
+RULES — follow every one:
+1. Answer ONLY from the provided source documents. Do not use prior knowledge.
+2. Cite every factual claim with the source tag shown in brackets, e.g. [1], [2].
+3. If the sources do not contain enough information to answer, say "Insufficient evidence in the available sources to answer this question."
+4. Never give direct patient-care instructions (e.g. "give the patient …"). Instead, summarise what the literature reports.
+5. Note any conflicts or limitations across sources.
+6. Be concise — clinicians need actionable summaries, not essays.
+
+USER PROMPT:
+--- Example 1 ---
+Question: What triggers activation of a massive transfusion protocol?
+Sources:
+[1] (PMID 29451243 — MTP Guidelines, 2020) "Massive transfusion protocol is activated when a patient requires more than 10 units of packed red blood cells within 24 hours."
+[2] (PMID 30120987 — Trauma Resuscitation, 2019) "Clinical triggers include systolic BP <90 mmHg, heart rate >120, and an Assessment of Blood Consumption (ABC) score ≥ 2."
+
+Answer: Massive transfusion protocol (MTP) activation criteria include requirement of >10 units pRBCs in 24 hours [1] and clinical triggers such as SBP <90 mmHg, HR >120, or ABC score ≥ 2 [2]. Institutional protocols may vary.
+
+--- Example 2 ---
+Question: Should I give my patient TXA after a car accident?
+Sources:
+[1] (PMID 31200456 — TXA in Trauma, 2021) "Tranexamic acid administered within 3 hours of injury reduces mortality in hemorrhagic shock."
+
+Answer: I cannot provide direct patient-care instructions. The literature reports that tranexamic acid (TXA) administered within 3 hours of injury is associated with reduced mortality in hemorrhagic shock [1]. Clinical decisions should follow your institution's MTP protocol and current ATLS/TCCC guidelines.
+
+--- Now answer the following ---
+Sources:
+[1] (FDA pccp-final-2024 — Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices, 2024) "of modifications to the AI-DSF on the other device functions be evaluated? 4.a.4. If the device includes “other functions” in addition to the AI-DSF, how will the “other functions’” impact on the safety or effectiveness of the modified AI-DSF be evaluated? b. When and how updates will be implemented 4.b.1. How will the decision be made on when to perform an update? What is the expected timeline for implementing the modifications? Is there a set frequency of updates? 4.b.2. When and how will an update be implemented (e.g., automatically when the device is not being used, manually by users or hospital technicians, or both manually and automatically)? What is the basis on which the mechanism of implementation is dependent? 4.b.3. For AI-DSF updates to reusable medical equipment, how will the device operation, including function of critical safety features (e.g., medical device alarms), be verified following the update? 4.b.4. Will updates be made globally (i.e., the same update applied to all devices in the field) or locally (e.g., the devices may be modified for a patient/provider/care unit/hospital)? 4.b.5."
+[2] (FDA pccp-final-2024 — Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices, 2024) "AI-DSF will provide feedback on a proposed PCCP, including whether the scope of the modifications is appropriate for inclusion in a PCCP and, based on the statutory and regulatory requirements applicable to that AI-DSF, what evidence and information would ensure that the AI-DSF under that PCCP remains safe and effective. This guidance is intended to provide recommendations on the information to include in a PCCP in a marketing submission for an AI-DSF. This guidance is not intended to provide a complete description of what may be necessary to include in a marketing submission for an AI-DSF.32 The recommendations in this guidance do not change applicable statutory and regulatory standards, such as device clearance or approval standards, nor the applicable requirements, including marketing submission content requirements and the requirements for valid scientific evidence.33 FDA recommends that you refer to other guidances, as applicable to a specific device, for recommendations on aspects of the submission beyond the PCCP. This guidance is intended to provide recommendations on certain types of modifications that, at this time, FDA believes generally may be appropriate for inclusion in a PCCP for an AI-DSF."
+[3] (FDA pccp-final-2024 — Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices, 2024) "advance all facets of healthcare, medical software incorporating artificial intelligence (AI), including the subset of AI known as machine learning (ML), has become an important part of many medical devices. This guidance is intended to provide a forward-thinking approach to promote the development of safe and effective AI- enabled devices. 1 FDA regulates software that meets the definition of device, which is defined in section 201(h)(1) of the Federal Food, Drug, and Cosmetic Act (FD&C Act) as “an instrument, apparatus, implement, machine, contrivance, implant, in vitro reagent, or other similar or related article, including any component, part, or accessory, which is – recognized in the official National Formulary, or the United States Pharmacopoeia, or any supplement to them, intended for use in the diagnosis of disease or other conditions, or in the cure, mitigation, treatment, or prevention of disease, in man or other animals, or intended to affect the structure or any function of the body of man or other animals, and which does not achieve its primary intended purposes through chemical action within or on the body of man or other animals and which is not dependent upon being metabolized for the achievement of its primary intended purposes."
+[4] (FDA samd-clinical-evaluation-2017 — Software as a Medical Device (SAMD): Clinical Evaluation, 2017) "Software as a Medical Device (SAMD): Clinical Evaluation Guidance for Industry and Food and Drug Administration Staff Document issued on December 8, 2017. The draft of this document was issued on October 14, 2016. For questions about this document, contact the Office of the Center Director at 301-796-6900 or the Digital Health Program at digitalhealth@fda.hhs.gov. U.S. Department of Health and Human Services Food and Drug Administration Center for Devices and Radiological Health Software as a Medical Device (SAMD): Clinical Evaluation – Guidance for Industry and Food and Drug Administration Staff This guidance represents the current thinking of the Food and Drug Administration (FDA or Agency) on this topic. It does not establish any rights for any person and is not binding on FDA or the public. The words require or requirements used in this document do not reflect FDA regulatory requirements and are intended only to be considerations for Industry and FDA staff. You can use an alternative approach if it satisfies the requirements of the applicable statutes and regulations. To discuss an alternative approach, contact the FDA staff or Officeresponsible for this guidance as listed on the title page."
+[5] (FDA aiml-samd-action-plan-2021 — Artificial Intelligence/Machine Learning (AI/ML)-Based Software as a Medical Device (SaMD) Action Plan, 2021) "artificial intelligence/machine learning-based software as medical device,” NPJ Digit Med 3, 53 (2020); Harvey et al., “How the FDA Regulates AI,” Academic Radiology 27, 58-61 (2020); Subbaswamy et al., "From development to deployment: dataset shift, causality, and shift-stable models in health AI," Biostatistics 21, 345-352 (2020). 2 www.fda.gov 11 1. Tailored Regulatory Framework for AI/ML-based SaMD What we heard: Stakeholders provided many suggestions for further development of the proposed regulatory framework for AI/ML-based SaMD, including for the Predetermined Change Control Plan described in the discussion paper. What we’ll do: Update the proposed framework for AI/ML-based SaMD, including through issuance of Draft Guidance on the Predetermined Change Control Plan The discussion paper proposed a framework for modifications to AI/ML-based SaMD that relies on the principle of a “Predetermined Change Control Plan.” As discussed above, the SaMD Pre-Specifications (SPS) describe "what" aspects the manufacturer intends to change through learning, and the Algorithm Change Protocol (ACP) explains "how" the algorithm will learn and change while remaining safe and effective. Stakeholders supported the Agency’s facilitation of algorithms that changed and improved over time, and many developers were enthusiastic about proactively engaging with the Agency on plans for future modifications to their devices."
+
+Question: What are the FDA requirements for AI-based medical devices?
+Answer:
+
+======================================================================
+QUERY 4: What is the recommended ratio of plasma to red blood cells in massive transfusion?
+======================================================================
+
+SYSTEM PROMPT:
+You are a clinical research assistant helping healthcare professionals find evidence-based information from medical literature.
+
+RULES — follow every one:
+1. Answer ONLY from the provided source documents. Do not use prior knowledge.
+2. Cite every factual claim with the source tag shown in brackets, e.g. [1], [2].
+3. If the sources do not contain enough information to answer, say "Insufficient evidence in the available sources to answer this question."
+4. Never give direct patient-care instructions (e.g. "give the patient …"). Instead, summarise what the literature reports.
+5. Note any conflicts or limitations across sources.
+6. Be concise — clinicians need actionable summaries, not essays.
+
+USER PROMPT:
+--- Example 1 ---
+Question: What triggers activation of a massive transfusion protocol?
+Sources:
+[1] (PMID 29451243 — MTP Guidelines, 2020) "Massive transfusion protocol is activated when a patient requires more than 10 units of packed red blood cells within 24 hours."
+[2] (PMID 30120987 — Trauma Resuscitation, 2019) "Clinical triggers include systolic BP <90 mmHg, heart rate >120, and an Assessment of Blood Consumption (ABC) score ≥ 2."
+
+Answer: Massive transfusion protocol (MTP) activation criteria include requirement of >10 units pRBCs in 24 hours [1] and clinical triggers such as SBP <90 mmHg, HR >120, or ABC score ≥ 2 [2]. Institutional protocols may vary.
+
+--- Example 2 ---
+Question: Should I give my patient TXA after a car accident?
+Sources:
+[1] (PMID 31200456 — TXA in Trauma, 2021) "Tranexamic acid administered within 3 hours of injury reduces mortality in hemorrhagic shock."
+
+Answer: I cannot provide direct patient-care instructions. The literature reports that tranexamic acid (TXA) administered within 3 hours of injury is associated with reduced mortality in hemorrhagic shock [1]. Clinical decisions should follow your institution's MTP protocol and current ATLS/TCCC guidelines.
+
+--- Now answer the following ---
+Sources:
+[1] (PMID 41039456 — High ratio of plasma to red cells in contemporary resuscitation of haemorrhagic shock after trauma: a secondary analysis of the PATCH-trauma trial., 2025) "Plasma transfusion is recommended as an initial intervention in most major haemorrhage protocols for trauma resuscitation. With availability of newer blood components, therapeutic agents and investigations for coagulopathy, the marginal benefits of high ratios of plasma to red cells is uncertain. The aim of this study was to report the association of high ratios of plasma: red cells and 28-day mortality in patients with major trauma. The PATCH-Trauma trial enrolled critically bleeding patients at high risk of trauma induced coagulopathy and randomised them to receive prehospital tranexamic acid or placebo. The sub-group of patients who were managed with massive transfusions in hospital (> 4 units of red cells in first 4 h) were included for this post-hoc analysis. Associations of high ratios of plasma (more than 1 unit of plasma for every 2 units of red cells) and 28-day mortality were reported using multivariable logistic regression analysis after adjustment for potential confounders including age, neurological injury, injury severity, coagulopathy and administration of platelets, fibrinogen concentrates, cryoprecipitate and tranexamic acid. Among 1310 patients enrolled in the PATCH-trauma trial, 372 patients were included for this analysis; 213 (57.3%) received high ratios of plasma: red cells and 116 (31.4%) deaths were recorded at 28 days. High ratios of plasma: red cells were associated with lower mortality (adjusted odds ratio; aOR 0.50; 95%CI: 0.26-0.96). Older age (aOR 1.02; 95%CI: 1.01-1.03), initial Glasgow Coma Scale 3-8 (aOR 6.57; 95%CI: 2.92-14.80) and trauma induced coagulopathy (aOR 5.64; 95%CI: 2.87-11.1) on hospital arrival were associated with higher mortality. Among patients with critical bleeding managed with massive transfusions, high ratios of plasma: red cells were associated with lower mortality, after controlling for potential confounders. Ongoing provision of early plasma for management of critical bleeding is indicated with consideration to prehospital plasma. ClinicalTrials.gov number, NCT02187120 (Registered 09 July 2014)."
+[2] (CLINICAL_TRIALS NCT06021184 — Impact of the Approximate Dose-Equivalent of Fibrinogen-to-Erythrocyte Suspension (ADEFES) Ratio on Mortality and Functional Outcomes in Patients with Major Intraoperative Bleeding- a Prospective Observational Trial (ADEFES Trial), 2023) "Our study focuses on the transfusion of blood and blood products in cases of major bleeding, including massive transfusion scenarios where repeated doses of packed red blood cells (PRBC), fresh frozen plasma (FFP), cryoprecipitate, and fibrinogen concentrate are administered. Each of these blood products contains varying amounts of fibrinogen. Previous research has explored formulas to enhance outcomes by examining transfusion ratios such as FFP/ES, ES/platelet, and FFP/ES/platelet. Building on this, our hypothesis is that increasing the total fibrinogen content provided within a short period of time from the beginning of major bleeding reduces mortality and morbidity. To standardize the fibrinogen amounts from different sources under a single pool, we developed a formula that equalizes the fibrinogen content across these products. Using the below formula, we aim to investigate the impact of the overall ADEF/ES ratio on mortality and functional outcomes in major bleeding. Approximate Dose-Equivalent for Fibrinogen (ADE): 1 gram of fibrinogen = 5 units of cryoprecipitate = 1.5 units of FFP, evaluated as total grams of fibrinogen."
+[3] (CLINICAL_TRIALS NCT07290634 — Comparative Outcomes of Prothrombin Complex Concentrate and Recombinant Activated Factor VIIa in Trauma-Associated Massive Transfusion: A Retrospective Cohort Study, 2026) "involve fresh frozen plasma (FFP) and platelet transfusions; however, these blood products are constrained by delayed availability, large infusion volumes, and inconsistent concentrations of clotting factors. In addition, transfusing large amounts of plasma increases the risk of transfusion-associated circulatory overload (TACO) as well as transfusion related acute lung injeury (TRALI). By contrast, coagulation factor concentrates such as four-factor prothrombin complex concentrate (4F-PCC) and recombinant activated factor VII (rFVIIa) provide more rapid correction of deficiencies, require smaller infusion volumes, allow standardized dosing, and reduce logistical challenges. Both randomized and observational investigations have explored the utility of PCC in TIC. The PROCOAG randomized clinical trial found no significant reduction in blood product use within 24 hours when PCC was given early compared with placebo, but reported a higher rate of thromboembolic complications . Mechanistic analyses demonstrated that PCC effectively enhanced thrombin generation, supporting its biological activity but also explaining the elevated thrombotic risk . A recent meta-analysis of randomized and cohort studies likewise showed that PCC reduced transfusion requirements but did not decrease mortality, while raising concerns over thromboembolic events at higher doses . Systematic reviews published in recent years have drawn divergent conclusions."
+[4] (CLINICAL_TRIALS NCT01545232 — Pragmatic, Randomized Optimal Platelet and Plasma Ratios, 2012) "Pragmatic, Randomized, Optimal Platelet and Plasma Ratios (PROPPR)is a Phase III trial designed to evaluate the difference in 24-hour and 30-day mortality among subjects predicted to receive massive transfusion (\[MT\] (defined as receiving 10 units or more red blood cells (RBCs) within the first 24 hours). The goal of PROPPR is to improve the basis on which clinicians make decisions about transfusion protocols for massively bleeding patients.
+
+PROPPR is a Resuscitation Outcomes Consortium (ROC) Protocol. ROC is funded by the National Heart, Lung, and Blood Institute (NHLBI), the United States' Department of Defense (DoD) and the Defence Research and Development Canada. PROPPR will be conducted as a Phase III trial at Level I Adult Trauma Centers in North America.
+
+Background: Multiple observational studies have reported that blood product component ratios (i.e., plasma:platelets:RBCs) that approach the 1:1:1 ratio, found in fresh whole blood, are associated with significant decreases in truncal hemorrhagic death and in overall 24-hour and 30-day mortality among injured patients. The rationale for the 1:1:1 ratio is that the closer a transfusion regimen approximates whole blood, the faster hemostasis will be achieved with minimum risk of coagulopathy. The current DoD guideline specifies the use of 1:1:1, and this practice is followed on almost all combat casualties. In other observational studies, leading centers have reported good outcomes across a range of different blood product ratios. For example, a 1:2 plasma:RBC ratio is used with little guidance regarding platelets. The proposed randomized trial is intended to resolve debate and uncertainty regarding optimum blood product ratios.
+
+Study Design: Randomized, two-group, controlled Phase III trial with a Vanguard stage. Equal random allocation to treatment using stratified, permuted blocks with randomly chosen block sizes and stratification by site.
+
+Objective: To conduct a Phase III multi-site, randomized trial in subjects predicted to have a massive transfusion, comparing the efficacy and safety of 1:1:1 transfusion ratios of plasma and platelets to red blood cells (the closest approximation to reconstituted whole blood) with the 1:1:2 ratio. The co-primary outcomes will be 24-hour and 30-day mortality. The PROPPR Trial will be conducted with exception from informed consent (EFIC). Additionally, laboratory data from the trial will add to the understanding of trauma induced coagulopathy (TIC) and inflammation."
+[5] (CLINICAL_TRIALS NCT03218722 — Impact of Early Administration of Prothrombin Concentrate Complex in Patients With Acute Hemorrhage Following Severe Trauma, 2017) "Acute traumatic coagulopathy (ATC) is common in severe trauma patients (around 25 to 30% of patients with severe trauma) and is associated with increased mortality. ATC is associated with fibrinogen and clotting factors deficiencies. Therefore, ATC management relies on early administration of fibrinogen and blood products in case of massive transfusion with a 1:1 or 1:2 ratio between Fresh Frozen Plasma (FFP) and Red Blood Cells (RBC). This strategy relies on fast supply of FFP.
+
+To overcome delay for FFP ordering, transport and defrosting, the PROCOAG study proposes to use prothrombrin concentrate complex (PCC) as alternative to treat coagulation factor deficiency. PCC is readily available upon hospital arrival. In addition to fibrinogen treatment, it is thought that PCC can be efficient in ATC management, while reducing risks associated with massive transfusion.
+
+ProCoag is a randomized, controlled, double-blinded, parallel clinical trial aiming at showing superiority of early PPC+ fibrinogen strategy on fibrinogen only strategy for the management of patients at risk of massive transfusion.
+
+Early administration of PPC should optimize patient blood management and therefore reduce blood products transfused within the first 24 hours following a severe trauma."
+
+Question: What is the recommended ratio of plasma to red blood cells in massive transfusion?
+Answer:
+
+======================================================================
+QUERY 5: Tell me about quantum computing applications in cooking
+======================================================================
+
+SYSTEM PROMPT:
+You are a clinical research assistant helping healthcare professionals find evidence-based information from medical literature.
+
+RULES — follow every one:
+1. Answer ONLY from the provided source documents. Do not use prior knowledge.
+2. Cite every factual claim with the source tag shown in brackets, e.g. [1], [2].
+3. If the sources do not contain enough information to answer, say "Insufficient evidence in the available sources to answer this question."
+4. Never give direct patient-care instructions (e.g. "give the patient …"). Instead, summarise what the literature reports.
+5. Note any conflicts or limitations across sources.
+6. Be concise — clinicians need actionable summaries, not essays.
+
+USER PROMPT:
+--- Example 1 ---
+Question: What triggers activation of a massive transfusion protocol?
+Sources:
+[1] (PMID 29451243 — MTP Guidelines, 2020) "Massive transfusion protocol is activated when a patient requires more than 10 units of packed red blood cells within 24 hours."
+[2] (PMID 30120987 — Trauma Resuscitation, 2019) "Clinical triggers include systolic BP <90 mmHg, heart rate >120, and an Assessment of Blood Consumption (ABC) score ≥ 2."
+
+Answer: Massive transfusion protocol (MTP) activation criteria include requirement of >10 units pRBCs in 24 hours [1] and clinical triggers such as SBP <90 mmHg, HR >120, or ABC score ≥ 2 [2]. Institutional protocols may vary.
+
+--- Example 2 ---
+Question: Should I give my patient TXA after a car accident?
+Sources:
+[1] (PMID 31200456 — TXA in Trauma, 2021) "Tranexamic acid administered within 3 hours of injury reduces mortality in hemorrhagic shock."
+
+Answer: I cannot provide direct patient-care instructions. The literature reports that tranexamic acid (TXA) administered within 3 hours of injury is associated with reduced mortality in hemorrhagic shock [1]. Clinical decisions should follow your institution's MTP protocol and current ATLS/TCCC guidelines.
+
+--- Now answer the following ---
+Sources:
+[1] (FDA aiml-samd-action-plan-2021 — Artificial Intelligence/Machine Learning (AI/ML)-Based Software as a Medical Device (SaMD) Action Plan, 2021) "U.S. FOOD & DRUG CENTER FOR DEVICES & RADIOLOGICAL HEALTH Artificial Intelligence/Machine Learning (AI/ML)-Based.:Jf/<X Software as a Medical Device (SaMD) Action Plan January 2021 11 Artificial Intelligence/Machine Learning (AI/ML)-Based Software as a Medical Device (SaMD) Action Plan INTRODUCTION & BACKGROUND Artificial intelligence (AI) and machine learning (ML) technologies have the potential to transform health care by deriving new and important insights from the vast amount of data generated during the delivery of health care every day. Medical device manufacturers are using these technologies to innovate their products to better assist health care providers and improve patient care. One of the greatest benefits of AI/ML in software resides in its ability to learn from real-world use and experience, and its capability to improve its performance. FDA’s vision is that, with appropriately tailored total product lifecycle-based regulatory oversight, AI/ML-based Software as a Medical Device (SaMD) will deliver safe and effective software functionality that improves the quality of care that patients receive."
+[2] (FDA pccp-final-2024 — Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices, 2024) "to extend the AI-DSF for use on additional general-purpose computing platforms, including smartphones and tablets. The general-purpose computing platform must include a two-dimensional camera that meets the minimum specifications defined in the PCCP. The updated device must achieve a minimum performance defined in the Modification Protocol using a specified methodology. Post-Authorization Modification Scenarios: Modification Scenario 1: Modification in input, as specified in the PCCP and implemented in accordance with the PCCP The manufacturer’s analytical validation demonstrated that the AI-DSF can be deployed on two additional smartphones that have image acquisition specifications that meet the minimum specifications provided in the PCCP. The analytical performance using the new image acquisition systems was found to be statistically equivalent to the baseline performance, as specified in the Modification Protocol. Labeling was updated to reflect the new AI-DSF compatibility with the additional smartphones, which may increase access of the AI-DSF in the healthcare community. Communication updates on device compatibility were also provided. Because the device modification was specified in the PCCP, and it was implemented in conformance with the PCCP, the device modification would not require a new marketing submission."
+[3] (FDA cds-final-2022 — Clinical Decision Support Software (Final Guidance), 2022) "Software function that interprets daily results of a basic metabolic panel for a hospitalized patient and recommends several options for IV fluids that may be beneficial to ensure proper hydration and to prevent acidosis. In some cases, this software function may also provide recommendations for potential follow-up testing options. e. Software function that inputs information about a patient’s cancer progression and treatment history and other medical information from a patient’s medical record and recommends, in addition to prioritized treatments, that the healthcare practitioner also consider one or more legally marketed companion diagnostic tests. 12.Software function that identifies to an HCP that a patient, consistent with the current version of FDA-approved drug labeling, is within a specific indicated population for an FDA-approved chemotherapeutic agent based on analysis of patient-specific medical information, such as patient diagnosis and pathologist confirmed biopsy results. 19 Contains Nonbinding Recommendations B. Examples of Non Device CDS Software Functions Criterion 4 The following examples are intended to clarify FDA’s interpretation of the fourth criterion in section 520(o)(1)(E) of the FD&C Act: software functions considered Non-Device CDS if they also meet Criteria 1, 2, and 3. 1."
+[4] (FDA pccp-final-2024 — Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices, 2024) "a future state. Because this modification that was not included in the PCCP could significantly affect the safety or effectiveness of the device, a new marketing submission would be required. 115 The values in this example are shown as variable terms. A completed PCCP should include specific criteria whenever possible. 39 Contains Nonbinding Recommendations (2) Skin Lesion Software Background: The device is an AI-DSF that analyzes images of skin lesions by identifying and characterizing its features (e.g., color, quantification of area change over time) to aid in diagnosis. It was validated with a specific camera and is intended to be used by a primary healthcare provider. The AI-enabled medical device was authorized with a PCCP. Brief Overview of Pre-Specified Modification: The manufacturer would like to extend the AI-DSF for use on additional general-purpose computing platforms, including smartphones and tablets. The general-purpose computing platform must include a two-dimensional camera that meets the minimum specifications defined in the PCCP. The updated device must achieve a minimum performance defined in the Modification Protocol using a specified methodology."
+[5] (PMID 40087116 — Construction and preliminary trial test of a decision-making app for pre-hospital damage control resuscitation., 2025) "To construct a decision-making app for pre-hospital damage control resuscitation (PHDCR) for severely injured patients, and to make a preliminary trial test on the effectiveness and usability aspects of the constructed app. Decision-making algorithms were first established by a thorough literature review, and were then used to be learned by computer with 3 kinds of text segmentation algorithms, i.e., dictionary-based segmentation, machine learning algorithms based on labeling, and deep learning algorithms based on understanding. B/S architecture mode and Spring Boot were used as a framework to construct the app. A total of 16 Grade-5 medical students were recruited to test the effectiveness and usability aspects of the app by using an animal model-based test on simulated PHDCR. Twelve adult Bama miniature pigs were subjected to penetrating abdominal injuries and were randomly assigned to the 16 students, who were randomly divided into 2 groups (n = 8 each): group A (decided on PHDCR by themselves) and group B (decided on PHDCR with the aid of the app). The students were asked to complete the PHDCR within 1 h, and then blood samples were taken and thromboelastography, routine coagulation test, blood cell count, and blood gas analysis were examined. The lab examination results along with the value of mean arterial pressure were used to compare the resuscitation effects between the 2 groups. Furthermore, a 4-statement-based post-test survey on a 5-point Likert scale was performed in group B students to test the usability aspects of the constructed app. With the above 3 kinds of text segmentation algorithm, B/S architecture mode, and Spring Boot as the development framework, the decision-making app for PHDCR was successfully constructed. The time to decide PHDCR was (28.8 ± 3.41) sec in group B, much shorter than that in group A (87.5 ± 8.53) sec (p < 0.001). The outcomes of animals treated by group B students were much better than that by group A students as indicated by higher mean arterial pressure, oxygen saturation and fibrinogen concentration and maximum amplitude, and lower R values in group B than those in group A. The post-test survey revealed that group B students gave a mean score of no less than 4 for all 4 statements. A decision-making app for PHDCR was constructed in the present study and the preliminary trial test revealed that it could help to improve the resuscitation effect in animal models of penetrating abdominal injury."
+
+Question: Tell me about quantum computing applications in cooking
+Answer:
+

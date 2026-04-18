@@ -1,0 +1,207 @@
+{
+  "total_evaluations": 10,
+  "hallucination_rate": 0.5,
+  "hallucinating_count": 5,
+  "target_rate": 0.02,
+  "meets_target": false,
+  "evaluations": [
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert.",
+      "is_hallucinating": true,
+      "details": {
+        "is_hallucinating": true,
+        "hallucination_rate": 1.0,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "Please consult primary literature or a subject-matter expert"
+        ],
+        "overall_grounding": 0.0,
+        "sentence_scores": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert.",
+      "is_hallucinating": true,
+      "details": {
+        "is_hallucinating": true,
+        "hallucination_rate": 1.0,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "Please consult primary literature or a subject-matter expert"
+        ],
+        "overall_grounding": 0.0,
+        "sentence_scores": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert.",
+      "is_hallucinating": true,
+      "details": {
+        "is_hallucinating": true,
+        "hallucination_rate": 1.0,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "Please consult primary literature or a subject-matter expert"
+        ],
+        "overall_grounding": 0.0,
+        "sentence_scores": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources [1] and [3] report on the comparison of long-term outcomes between transanal endorectal pull-through (TERP",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.25,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question"
+        ],
+        "overall_grounding": 0.5439,
+        "sentence_scores": [
+          0.0,
+          0.7059,
+          0.6316,
+          0.4667
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert.",
+      "is_hallucinating": true,
+      "details": {
+        "is_hallucinating": true,
+        "hallucination_rate": 1.0,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "Please consult primary literature or a subject-matter expert"
+        ],
+        "overall_grounding": 0.0769,
+        "sentence_scores": [
+          0.1667,
+          0.0
+        ]
+      }
+    },
+    {
+      "answer_preview": "Double balloon enteroscopy (DBE) appears to be efficacious and safe in a community setting, as reported by two studies.\n\nThe first study [1] indicates that DBE procedures were performed on 66 patients",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.15789473684210525,
+        "flagged_facts": [
+          "Double balloon enteroscopy (DBE) appears to be efficacious and safe in a community setting, as reported by two studies",
+          "The second study  provides more detailed information on the outcomes of DBE procedures",
+          "Insufficient evidence in the available sources to determine if there are any significant complications or adverse events associated with DBE procedures in a community setting"
+        ],
+        "overall_grounding": 0.6614,
+        "sentence_scores": [
+          0.1667,
+          0.6667,
+          0.9167,
+          1.0,
+          0.25,
+          0.5556,
+          0.8235,
+          1.0,
+          1.0,
+          0.5,
+          0.7143,
+          0.8571,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.2
+        ]
+      }
+    },
+    {
+      "answer_preview": "Emergency surgery, specifically emergency laparotomy, is associated with poorer outcomes and higher mortality rates compared to non-emergency surgery.\n\nThe available sources report the following morta",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.25,
+        "flagged_facts": [
+          "The available sources report the following mortality rates:",
+          "Insufficient evidence is available to directly compare or contrast these studies"
+        ],
+        "overall_grounding": 0.5873,
+        "sentence_scores": [
+          0.7333,
+          0.3333,
+          0.6667,
+          1.0,
+          1.0,
+          1.0,
+          0.5217,
+          0.1429
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe sources describe the use of anchoring vignettes and statistical models (ordered probit model and CHOPIT) to adjust for repo",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.4,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "Therefore, without further information or a clear statement from the sources, it is not possible to provide an answer to this question"
+        ],
+        "overall_grounding": 0.3582,
+        "sentence_scores": [
+          0.0,
+          0.4286,
+          0.6,
+          0.35,
+          0.2
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources discuss the relationship between genetic HDL deficiency states and coronary heart disease, as well as caro",
+      "is_hallucinating": false,
+      "details": {
+        "is_hallucinating": false,
+        "hallucination_rate": 0.3333333333333333,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question"
+        ],
+        "overall_grounding": 0.561,
+        "sentence_scores": [
+          0.0,
+          0.8,
+          0.4667
+        ]
+      }
+    },
+    {
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert.",
+      "is_hallucinating": true,
+      "details": {
+        "is_hallucinating": true,
+        "hallucination_rate": 1.0,
+        "flagged_facts": [
+          "Insufficient evidence in the available sources to answer this question",
+          "Please consult primary literature or a subject-matter expert"
+        ],
+        "overall_grounding": 0.0,
+        "sentence_scores": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ]
+}

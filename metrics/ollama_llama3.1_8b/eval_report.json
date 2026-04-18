@@ -1,0 +1,1223 @@
+{
+  "timestamp": "2026-04-17T16:17:51",
+  "total_time_s": 4160.16,
+  "num_questions": 60,
+  "num_answered": 60,
+  "num_errors": 0,
+  "domain_filter": null,
+  "ragas": {
+    "faithfulness": 0.2591,
+    "answer_relevance": 0.7785,
+    "context_precision": 0.7567,
+    "num_questions": 60,
+    "per_question": [
+      {
+        "faithfulness": 0.126,
+        "answer_relevance": 0.8333,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.3332,
+        "answer_relevance": 0.8889,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2928,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.4712,
+        "answer_relevance": 0.875,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.4529,
+        "answer_relevance": 1.0,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2674,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3276,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2349,
+        "answer_relevance": 0.8,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.2872,
+        "answer_relevance": 0.3333,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.2171,
+        "answer_relevance": 0.8,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3059,
+        "answer_relevance": 0.8571,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3248,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1,
+        "answer_relevance": 0.75,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.1034,
+        "answer_relevance": 0.75,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.2725,
+        "answer_relevance": 0.8333,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.1631,
+        "answer_relevance": 0.8571,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.2967,
+        "answer_relevance": 0.8333,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.2507,
+        "answer_relevance": 0.8571,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.1799,
+        "answer_relevance": 0.8,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3616,
+        "answer_relevance": 0.6,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.3033,
+        "answer_relevance": 0.6667,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2669,
+        "answer_relevance": 0.875,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1884,
+        "answer_relevance": 0.8,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.158,
+        "answer_relevance": 0.8,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.4112,
+        "answer_relevance": 0.75,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1293,
+        "answer_relevance": 0.8,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2852,
+        "answer_relevance": 0.8571,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2991,
+        "answer_relevance": 0.875,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.3424,
+        "answer_relevance": 0.875,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3554,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3418,
+        "answer_relevance": 0.8333,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.3865,
+        "answer_relevance": 0.8571,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.4333,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3503,
+        "answer_relevance": 0.8571,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1186,
+        "answer_relevance": 0.875,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.248,
+        "answer_relevance": 0.8333,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.1614,
+        "answer_relevance": 0.8571,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.348,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1768,
+        "answer_relevance": 0.7778,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.3191,
+        "answer_relevance": 0.875,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.1139,
+        "answer_relevance": 1.0,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.1893,
+        "answer_relevance": 0.6667,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.3702,
+        "answer_relevance": 0.5,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3401,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2633,
+        "answer_relevance": 0.75,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.305,
+        "answer_relevance": 0.75,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1852,
+        "answer_relevance": 0.8571,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.1647,
+        "answer_relevance": 0.8,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.2623,
+        "answer_relevance": 0.6667,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3877,
+        "answer_relevance": 0.8571,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.3043,
+        "answer_relevance": 0.8,
+        "context_precision": 0.2
+      },
+      {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.0,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.1167,
+        "answer_relevance": 0.0,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.223,
+        "answer_relevance": 0.8333,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.1952,
+        "answer_relevance": 0.8333,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1705,
+        "answer_relevance": 0.75,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.2655,
+        "answer_relevance": 0.8571,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.2964,
+        "answer_relevance": 1.0,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.1965,
+        "answer_relevance": 0.5,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.2017,
+        "answer_relevance": 0.8889,
+        "context_precision": 0.8
+      }
+    ]
+  },
+  "hallucination_rate": 0.5167,
+  "meets_hallucination_target": false,
+  "avg_confidence": 0.6148,
+  "avg_grounding": 0.7523,
+  "avg_latency_s": 69.34,
+  "per_question": [
+    {
+      "id": "qa_001",
+      "question": "What triggers activation of a massive transfusion protocol?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 75.61,
+      "confidence": 0.879,
+      "grounding_score": 0.715,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.8333333333333334,
+      "answer_preview": "Based on the provided sources, the following are reported as triggers for activation of a massive transfusion protocol (MTP):\n\n* Requirement of >10 units pRBCs in 24 hours [1]\n* Clinical triggers such"
+    },
+    {
+      "id": "qa_002",
+      "question": "What is the recommended plasma to red blood cell ratio in massive transfusion?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 104.38,
+      "confidence": 0.9,
+      "grounding_score": 0.8,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.42857142857142855,
+      "answer_preview": "Based on the provided sources, there is a range of recommendations for the plasma to red blood cell (RBC) ratio in massive transfusion. \n\n[1] recommends high ratios of plasma to RBCs (> 1 unit of plas"
+    },
+    {
+      "id": "qa_003",
+      "question": "What is the role of tranexamic acid in trauma hemorrhage?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 93.1,
+      "confidence": 0.912,
+      "grounding_score": 0.85,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.4117647058823529,
+      "answer_preview": "Tranexamic acid (TXA) plays a significant role in reducing bleeding and improving outcomes in trauma patients. The literature reports that TXA administered within 3 hours of injury reduces mortality i"
+    },
+    {
+      "id": "qa_004",
+      "question": "What is the evidence for prehospital tranexamic acid in traumatic brain injury?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 82.74,
+      "confidence": 0.934,
+      "grounding_score": 0.937,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.21428571428571427,
+      "answer_preview": "The literature reports conflicting evidence on the mortality benefit of prehospital tranexamic acid (TXA) in traumatic brain injury. The Study of Tranexamic Acid During Air and Ground Medical Prehospi"
+    },
+    {
+      "id": "qa_005",
+      "question": "How does viscoelastic hemostatic assay-guided transfusion compare to conventional coagulation testing?",
+      "domain": "transfusion",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 122.14,
+      "confidence": 0.917,
+      "grounding_score": 0.867,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.14285714285714285,
+      "answer_preview": "Viscoelastic hemostatic assay-guided transfusion has been compared to conventional coagulation testing in several studies, with conflicting results.\n\n[1] (PMID 41166985) found that viscoelastic assay-"
+    },
+    {
+      "id": "qa_006",
+      "question": "What is the role of fibrinogen concentrate in trauma hemorrhage?",
+      "domain": "transfusion",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 65.04,
+      "confidence": 0.92,
+      "grounding_score": 0.879,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.625,
+      "answer_preview": "According to the provided sources, fibrinogen concentrate plays a potential role in trauma hemorrhage by:\n\n* Increasing clot strength [1]\n* Reducing transfusion requirement by preventing ongoing bleed"
+    },
+    {
+      "id": "qa_007",
+      "question": "What are the benefits of whole blood resuscitation in trauma?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 81.69,
+      "confidence": 0.907,
+      "grounding_score": 0.828,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.2,
+      "answer_preview": "Whole blood resuscitation is associated with several benefits in trauma patients. According to [1], achieving hemostasis, which can be defined by receiving a single unit of blood or less, including wh"
+    },
+    {
+      "id": "qa_008",
+      "question": "What is hypotensive resuscitation in hemorrhagic shock?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 51.49,
+      "confidence": 0.3,
+      "grounding_score": 0.698,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.6666666666666666,
+      "answer_preview": "Hypotensive resuscitation in hemorrhagic shock refers to a treatment approach where patients with traumatic shock are managed with a lower blood pressure target, typically below 90 mmHg systolic blood"
+    },
+    {
+      "id": "qa_009",
+      "question": "What is REBOA and when is it indicated?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 92.85,
+      "confidence": 0.3,
+      "grounding_score": 0.906,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.5,
+      "answer_preview": "Resuscitative endovascular balloon occlusion of the aorta (REBOA) is an intervention used in trauma patients with severe hemorrhagic shock. According to [1], REBOA aims to stabilize hemodynamics and p"
+    },
+    {
+      "id": "qa_010",
+      "question": "What is the role of vasopressin in hemorrhagic shock?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 89.58,
+      "confidence": 0.916,
+      "grounding_score": 0.863,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.8181818181818182,
+      "answer_preview": "Vasopressin plays a potential beneficial role in managing hemorrhagic shock by restoring vascular tone, improving renal perfusion, promoting hemostasis, and reducing blood product transfusions [1]. It"
+    },
+    {
+      "id": "qa_011",
+      "question": "How does direct peritoneal resuscitation work in damage control surgery?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 89.52,
+      "confidence": 0.3,
+      "grounding_score": 0.888,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.5833333333333334,
+      "answer_preview": "Direct Peritoneal Resuscitation (DPR) is a technique used in Damage Control Surgery (DCS) to improve abdominal closure rates and decrease wound complications. According to [1], DPR involves continuous"
+    },
+    {
+      "id": "qa_012",
+      "question": "What is the mortality rate in hemorrhagic shock by classification?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 91.7,
+      "confidence": 0.3,
+      "grounding_score": 0.755,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.5,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question regarding the mortality rate in hemorrhagic shock by classification. The provided sources discuss various aspects of hemorrhagic "
+    },
+    {
+      "id": "qa_013",
+      "question": "What is the lethal triad in trauma?",
+      "domain": "trauma",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 54.43,
+      "confidence": 0.817,
+      "grounding_score": 0.667,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "The lethal triad in trauma refers to hypoperfusion, acidosis, and coagulopathy [2]."
+    },
+    {
+      "id": "qa_014",
+      "question": "What is damage control orthopedics versus early total care?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 53.74,
+      "confidence": 0.879,
+      "grounding_score": 0.716,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.8,
+      "answer_preview": "Damage-control orthopedics (DCO) and early total care (ETC) are two different approaches to managing fractures in multiply injured patients. According to [1], DCO involves temporary stabilization or d"
+    },
+    {
+      "id": "qa_015",
+      "question": "What is the role of lactate in predicting traumatic coagulopathy?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 52.99,
+      "confidence": 0.3,
+      "grounding_score": 0.599,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.0,
+      "answer_preview": "According to [1], base deficit was identified as an independent risk factor for traumatic coagulopathy, whereas lactate was not. However, it's worth noting that lactate levels did prevail in mortality"
+    },
+    {
+      "id": "qa_016",
+      "question": "What are the effects of freeze-dried plasma in prehospital care?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 44.15,
+      "confidence": 0.3,
+      "grounding_score": 0.789,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question regarding the specific effects of freeze-dried plasma in prehospital care. However, source [5] discusses dried plasma as a potent"
+    },
+    {
+      "id": "qa_017",
+      "question": "How does prehospital intubation affect mortality in hemorrhagic shock?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 69.45,
+      "confidence": 0.867,
+      "grounding_score": 0.666,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.25,
+      "answer_preview": "According to [1], a retrospective, multicenter study using data from the French Traumabase registry, among patients with hemorrhagic shock after severe trauma, prehospital intubation was not associate"
+    },
+    {
+      "id": "qa_018",
+      "question": "What is the impact of the ABC-Resuscitation sequence in prehospital trauma?",
+      "domain": "emergency_medicine",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 68.25,
+      "confidence": 0.3,
+      "grounding_score": 0.814,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.8,
+      "answer_preview": "Based on the provided sources [1], [2], and [3], the literature reports that prioritizing circulation (x) over airway-breathing-circulation (ABC) in prehospital trauma resuscitation, also known as x-A"
+    },
+    {
+      "id": "qa_019",
+      "question": "What is protective mechanical ventilation in ARDS?",
+      "domain": "critical_care",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 69.85,
+      "confidence": 0.913,
+      "grounding_score": 0.851,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.75,
+      "answer_preview": "Protective mechanical ventilation in Acute Respiratory Distress Syndrome (ARDS) includes strategies such as low-tidal volume ventilation [2] and prone positioning [4]. These approaches aim to minimize"
+    },
+    {
+      "id": "qa_020",
+      "question": "What is mechanical power in ventilation and why does it matter?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 85.37,
+      "confidence": 0.3,
+      "grounding_score": 0.951,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.3333333333333333,
+      "answer_preview": "Mechanical power in ventilation refers to the rate at which mechanical energy is delivered to the lungs during mechanical ventilation [1, 2]. It is a crucial concept in understanding ventilator-induce"
+    },
+    {
+      "id": "qa_021",
+      "question": "What is the role of ECMO in acute respiratory failure?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 60.46,
+      "confidence": 0.932,
+      "grounding_score": 0.929,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.6666666666666666,
+      "answer_preview": "ECMO can be a lifesaving procedure used to treat severe forms of heart and/or lung failure, particularly in cases where patients are at high risk of mortality [2]. It works by replacing the function o"
+    },
+    {
+      "id": "qa_022",
+      "question": "What is the optimal ventilation strategy for patients with acute brain injury?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 80.12,
+      "confidence": 0.3,
+      "grounding_score": 0.721,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.4444444444444444,
+      "answer_preview": "### Answer:\nInsufficient evidence in the available sources to answer this question.\n\nThe provided sources discuss various aspects of mechanical ventilation, including its effects on lung function, cer"
+    },
+    {
+      "id": "qa_023",
+      "question": "What is the role of thromboelastography in septic shock?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 68.13,
+      "confidence": 0.926,
+      "grounding_score": 0.905,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.7,
+      "answer_preview": "Thromboelastography (TEG) may be useful for assessing bleeding risk in septic patients [1, 2]. It analyzes all blood components and their interactions during clot formation and dissolution. A low leve"
+    },
+    {
+      "id": "qa_024",
+      "question": "What is the management approach for septic shock?",
+      "domain": "critical_care",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 81.44,
+      "confidence": 0.927,
+      "grounding_score": 0.909,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.7777777777777778,
+      "answer_preview": "The literature reports that the management approach for septic shock includes:\n\n* Rapid diagnosis and management are essential [1].\n* Antimicrobials should be administered as soon as possible, as dela"
+    },
+    {
+      "id": "qa_025",
+      "question": "Should vasopressors or advanced airway management come first in cardiac arrest?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 68.96,
+      "confidence": 0.3,
+      "grounding_score": 0.787,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.3333333333333333,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question definitively. While [1] suggests that the optimal sequence of vasopressor-airway resuscitation remains unclear, and [2] emphasize"
+    },
+    {
+      "id": "qa_026",
+      "question": "What is the fluid management approach in sepsis?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 61.98,
+      "confidence": 0.874,
+      "grounding_score": 0.697,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.7272727272727273,
+      "answer_preview": "Fluid management in sepsis involves careful assessment of intravascular volume status, dynamic haemodynamic variables, and fluid tolerance. A personalized approach using balanced solutions (BS) is pre"
+    },
+    {
+      "id": "qa_027",
+      "question": "What is the FDA framework for AI/ML-based software as a medical device?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 57.82,
+      "confidence": 0.91,
+      "grounding_score": 0.84,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.5,
+      "answer_preview": "The FDA's framework for AI/ML-based software as a medical device involves a tailored regulatory approach that includes:\n\n1. A \"Predetermined Change Control Plan\" (PCCP) that outlines how the algorithm"
+    },
+    {
+      "id": "qa_028",
+      "question": "What are predetermined change control plans for ML-enabled medical devices?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 58.85,
+      "confidence": 0.908,
+      "grounding_score": 0.834,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.5714285714285714,
+      "answer_preview": "According to [1] (FDA gmlp-2021 \u2014 Good Machine Learning Practice for Medical Device Development: Guiding Principles, 2021), Predetermined Change Control Plans (PCCPs) for machine learning-enabled medi"
+    },
+    {
+      "id": "qa_029",
+      "question": "What are the Good Machine Learning Practice principles for medical devices?",
+      "domain": "fda_regulatory",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 52.85,
+      "confidence": 0.918,
+      "grounding_score": 0.87,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.46153846153846156,
+      "answer_preview": "The Good Machine Learning Practice (GMLP) principles for medical devices are outlined in [1] and [2]. According to [1], the 10 guiding principles include:\n\n* Adopting good practices from other sectors"
+    },
+    {
+      "id": "qa_030",
+      "question": "How does the FDA define clinical decision support software?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 62.34,
+      "confidence": 0.936,
+      "grounding_score": 0.943,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.4375,
+      "answer_preview": "The FDA defines clinical decision support software (CDS) as software that provides decision support for healthcare professionals (HCPs) about diagnosis, treatment, prevention, cure, or mitigation of d"
+    },
+    {
+      "id": "qa_031",
+      "question": "What is the FDA approach to clinical evaluation of SaMD?",
+      "domain": "fda_regulatory",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 59.7,
+      "confidence": 0.896,
+      "grounding_score": 0.782,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.2,
+      "answer_preview": "The FDA's approach to clinical evaluation of Software as a Medical Device (SaMD) involves several key aspects, as outlined in the provided sources.\n\nAccording to [1] (FDA samd-clinical-evaluation-2017"
+    },
+    {
+      "id": "qa_032",
+      "question": "What is the evidence for topical tranexamic acid in surgical bleeding?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 79.77,
+      "confidence": 0.3,
+      "grounding_score": 0.753,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.25,
+      "answer_preview": "Topical tranexamic acid has been shown to reduce surgical bleeding in various studies. \n\n[1] (CLINICAL_TRIALS NCT03101124) investigated systemic absorption of topical tranexamic acid, but did not repo"
+    },
+    {
+      "id": "qa_033",
+      "question": "What is the tranexamic acid mechanism and pharmacokinetics in trauma?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 60.73,
+      "confidence": 0.911,
+      "grounding_score": 0.846,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.3333333333333333,
+      "answer_preview": "Tranexamic acid (TXA) is an antifibrinolytic agent that inhibits the conversion of plasminogen to plasmin, thereby limiting the effects of hyperfibrinolysis [5]. This mechanism is relevant in trauma p"
+    },
+    {
+      "id": "qa_034",
+      "question": "How are frozen red blood cells used in trauma transfusion?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 65.92,
+      "confidence": 0.3,
+      "grounding_score": 0.628,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.2,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources do not mention the use of frozen red blood cells in trauma transfusion. They discuss various aspects of ma"
+    },
+    {
+      "id": "qa_035",
+      "question": "What is the relationship between whole blood storage duration and hemostatic function?",
+      "domain": "transfusion",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 81.56,
+      "confidence": 0.889,
+      "grounding_score": 0.755,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "According to [3] (PMID 38531825), \"Whole blood storage duration alters fibrinogen levels and thrombin formation.\" The study found that aged murine whole blood had decreased fibrin clot formation compa"
+    },
+    {
+      "id": "qa_036",
+      "question": "What are effective approaches to noncompressible torso hemorrhage?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 75.22,
+      "confidence": 0.3,
+      "grounding_score": 0.868,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.8571428571428571,
+      "answer_preview": "Effective approaches to noncompressible torso hemorrhage (NCTH) include controlling the bleeding source, resuscitating to maintain organ perfusion and restore hemostasis, and increasing the body's res"
+    },
+    {
+      "id": "qa_037",
+      "question": "What is the role of walking blood banks in austere environments?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 57.04,
+      "confidence": 0.3,
+      "grounding_score": 0.625,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question regarding the specific role of walking blood banks in austere environments. However, [4] mentions that whole blood and low-titer "
+    },
+    {
+      "id": "qa_038",
+      "question": "How does hypothermia after cardiac arrest affect neurological outcomes?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 93.02,
+      "confidence": 0.874,
+      "grounding_score": 0.696,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.25,
+      "answer_preview": "Based on the provided sources, here is a summary of how hypothermia after cardiac arrest affects neurological outcomes:\n\nHypothermia has been shown to have neuroprotective effects after cardiac arrest"
+    },
+    {
+      "id": "qa_039",
+      "question": "What is the relationship between endotracheal intubation and laryngeal tube in cardiac arrest outcomes?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 81.67,
+      "confidence": 0.3,
+      "grounding_score": 0.776,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "The available sources do not provide a direct comparison of the outcomes associated with endotracheal intubation (ETI) and laryngeal tubes (LTs) in cardiac arrest. However, [2] reports on an analysis "
+    },
+    {
+      "id": "qa_040",
+      "question": "What is the role of lactate clearance in predicting massive transfusion needs?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 63.41,
+      "confidence": 0.3,
+      "grounding_score": 0.59,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.3333333333333333,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources discuss various markers and scoring systems for predicting massive transfusion needs, including base defic"
+    },
+    {
+      "id": "qa_041",
+      "question": "How do antibiotic concentrations change during massive transfusion?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 65.41,
+      "confidence": 0.3,
+      "grounding_score": 0.639,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nWhile several studies discuss the impact of blood transfusion on antibiotic concentrations [1-5], none directly address how ant"
+    },
+    {
+      "id": "qa_042",
+      "question": "What is the abdominal compartment syndrome and how is it prevented during resuscitation?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 110.69,
+      "confidence": 0.904,
+      "grounding_score": 0.816,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.65,
+      "answer_preview": "Abdominal compartment syndrome (ACS) is a life-threatening condition characterized by increased intra-abdominal pressure, which can lead to organ dysfunction or failure [1]. It is a potential complica"
+    },
+    {
+      "id": "qa_043",
+      "question": "What is the DIC score and its role in sepsis management?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 83.44,
+      "confidence": 0.902,
+      "grounding_score": 0.807,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.36363636363636365,
+      "answer_preview": "The DIC (Disseminated Intravascular Coagulation) score is a scoring system used to diagnose and assess the severity of disseminated intravascular coagulation, a serious blood disorder that can cause c"
+    },
+    {
+      "id": "qa_044",
+      "question": "What are the effects of mechanical ventilation on the extracellular matrix?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 87.71,
+      "confidence": 0.3,
+      "grounding_score": 0.902,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.18181818181818182,
+      "answer_preview": "Mechanical ventilation can lead to damage in the extracellular matrix (ECM) [1]. This damage triggers inflammation and ventilator-induced lung injury (VILI), particularly in conditions such as acute r"
+    },
+    {
+      "id": "qa_045",
+      "question": "What mobile applications exist for trauma care decision support?",
+      "domain": "emergency_medicine",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 47.85,
+      "confidence": 0.3,
+      "grounding_score": 0.623,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.6666666666666666,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources discuss the use of mobile applications for documentation and clinical decision support in combat casualty "
+    },
+    {
+      "id": "qa_046",
+      "question": "What is the role of platelet aggregation monitoring in critically ill patients?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 56.62,
+      "confidence": 0.908,
+      "grounding_score": 0.83,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.3333333333333333,
+      "answer_preview": "Platelet aggregation monitoring may be useful for assessing bleeding risk in critically ill patients, particularly those with sepsis or severe viral infections. Studies suggest that impaired platelet "
+    },
+    {
+      "id": "qa_047",
+      "question": "How is low-volume resuscitation being developed for prehospital hemorrhagic shock?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 64.3,
+      "confidence": 0.876,
+      "grounding_score": 0.704,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.75,
+      "answer_preview": "Low-volume resuscitation strategies are being explored for prehospital management of hemorrhagic shock. According to [3], high-volume crystalloids (2000 mL) improved stroke volume compared to low-volu"
+    },
+    {
+      "id": "qa_048",
+      "question": "What is the FAST protocol in emergency ultrasound?",
+      "domain": "emergency_medicine",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 57.88,
+      "confidence": 0.3,
+      "grounding_score": 0.591,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nThe provided sources discuss various aspects of trauma care, including fibrinogen measurement, coagulopathy diagnosis and manag"
+    },
+    {
+      "id": "qa_049",
+      "question": "What is the role of remote ischemic conditioning in trauma?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 69.1,
+      "confidence": 0.3,
+      "grounding_score": 0.772,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.5555555555555556,
+      "answer_preview": "Remote ischemic conditioning (RIC) has been investigated as a potential intervention to protect against impaired organ function and inflammation following severe traumatic events. According to [1], RI"
+    },
+    {
+      "id": "qa_050",
+      "question": "What is the role of the caval index in assessing volume status?",
+      "domain": "emergency_medicine",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 43.23,
+      "confidence": 0.3,
+      "grounding_score": 0.814,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.25,
+      "answer_preview": "The literature reports that the caval index (IVC collapsibility index) can be used as an ultrasound-based measure to assess patients with hypovolemic hemorrhagic shock. A study [2] aimed to determine "
+    },
+    {
+      "id": "qa_051",
+      "question": "Tell me about quantum computing applications in cooking",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 47.82,
+      "confidence": 0.3,
+      "grounding_score": 0.469,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.6666666666666666,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nNote: None of the provided sources mention anything related to quantum computing or its applications in cooking. The sources co"
+    },
+    {
+      "id": "qa_052",
+      "question": "What is the best cryptocurrency to invest in right now?",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 36.13,
+      "confidence": 0.599,
+      "grounding_score": 0.194,
+      "is_safe": false,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. Please consult primary literature or a subject-matter expert."
+    },
+    {
+      "id": "qa_053",
+      "question": "Can you write me a poem about flowers?",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "ok",
+      "latency_s": 41.91,
+      "confidence": 0.3,
+      "grounding_score": 0.205,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question."
+    },
+    {
+      "id": "qa_054",
+      "question": "What is the role of subcutaneous lactate monitoring in trauma?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 48.8,
+      "confidence": 0.3,
+      "grounding_score": 0.644,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.75,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question regarding the specific role of subcutaneous lactate monitoring in trauma. However, [5] suggests that a wearable continuous lactat"
+    },
+    {
+      "id": "qa_055",
+      "question": "What is the optimal expiratory duration in mechanical ventilation?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 68.32,
+      "confidence": 0.3,
+      "grounding_score": 0.802,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.8333333333333334,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nWhile [1] mentions that individualized lung-protective strategies, including positive end-expiratory pressure (PEEP) titration "
+    },
+    {
+      "id": "qa_056",
+      "question": "What are the indications for massive transfusion protocol in non-trauma patients?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 54.3,
+      "confidence": 0.3,
+      "grounding_score": 0.547,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.8333333333333334,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question.\n\nSources [1] and [4] discuss blood transfusion guidelines and triggers, but they do not specifically address indications for mas"
+    },
+    {
+      "id": "qa_057",
+      "question": "What is the evidence for early vasopressor use in hemorrhagic shock?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 76.37,
+      "confidence": 0.3,
+      "grounding_score": 0.834,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.5,
+      "answer_preview": "The literature reports conflicting and limited evidence regarding the effectiveness of early vasopressor use in hemorrhagic shock. [1] suggests that prehospital norepinephrine administration may be as"
+    },
+    {
+      "id": "qa_058",
+      "question": "How does tranexamic acid reduce blood loss in cesarean delivery?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 54.39,
+      "confidence": 0.886,
+      "grounding_score": 0.742,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": false,
+      "hallucination_rate": 0.1,
+      "answer_preview": "Tranexamic acid (TXA) reduces blood loss in cesarean delivery by:\n\n1. Reducing intraoperative blood loss [2] - The meta-analysis revealed that TXA significantly reduces intraoperative blood loss compa"
+    },
+    {
+      "id": "qa_059",
+      "question": "What is the role of pressure control versus volume control ventilation in pediatrics?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "latency_s": 58.48,
+      "confidence": 0.9,
+      "grounding_score": 0.8,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.6,
+      "answer_preview": "In pediatric patients, there is a marked preference for the pressure control mode in ventilatory management [1]. However, both modes have their specific indications. In predominantly obstructive condi"
+    },
+    {
+      "id": "qa_060",
+      "question": "What is the role of complement blockade in sepsis-associated hemolytic uremic syndrome?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "latency_s": 78.3,
+      "confidence": 0.852,
+      "grounding_score": 0.608,
+      "is_safe": true,
+      "num_sources": 5,
+      "is_hallucinating": true,
+      "hallucination_rate": 0.7142857142857143,
+      "answer_preview": "Based on the provided sources, there is evidence that complement blockade with eculizumab can be effective in reversing multi-organ failure associated with sepsis-induced atypical hemolytic uremic syn"
+    }
+  ]
+}

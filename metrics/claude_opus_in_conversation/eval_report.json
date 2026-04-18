@@ -1,0 +1,211 @@
+{
+  "model": "claude-opus-4-6-in-conversation",
+  "timestamp": "2026-04-17T12:23:07",
+  "total_time_s": 0.0,
+  "num_questions": 12,
+  "num_answered": 12,
+  "ragas": {
+    "faithfulness": 0.3176,
+    "answer_relevance": 0.7019,
+    "context_precision": 0.6167,
+    "num_questions": 12,
+    "per_question": [
+      {
+        "faithfulness": 0.2791,
+        "answer_relevance": 0.6667,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.3828,
+        "answer_relevance": 0.7778,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.3675,
+        "answer_relevance": 0.5,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.4598,
+        "answer_relevance": 0.875,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.3774,
+        "answer_relevance": 0.8571,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.4049,
+        "answer_relevance": 0.5,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.349,
+        "answer_relevance": 0.8333,
+        "context_precision": 0.8
+      },
+      {
+        "faithfulness": 0.6139,
+        "answer_relevance": 0.7143,
+        "context_precision": 0.4
+      },
+      {
+        "faithfulness": 0.2958,
+        "answer_relevance": 0.8571,
+        "context_precision": 0.6
+      },
+      {
+        "faithfulness": 0.2809,
+        "answer_relevance": 0.875,
+        "context_precision": 1.0
+      },
+      {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.8,
+        "context_precision": 0.0
+      },
+      {
+        "faithfulness": 0.0,
+        "answer_relevance": 0.1667,
+        "context_precision": 0.0
+      }
+    ]
+  },
+  "hallucination_rate": 0.1667,
+  "meets_hallucination_target": false,
+  "per_question": [
+    {
+      "id": "qa_001",
+      "question": "What triggers activation of a massive transfusion protocol?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.2,
+      "overall_grounding": 0.806,
+      "answer_preview": "Massive transfusion protocol (MTP) is activated when a patient requires more than 10 units of packed red blood cells within 24 hours, which is the most common definition of massive transfusion [1]. MT"
+    },
+    {
+      "id": "qa_002",
+      "question": "What is the recommended plasma to red blood cell ratio in massive transfusion?",
+      "domain": "transfusion",
+      "difficulty": "medium",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.0,
+      "overall_grounding": 0.8507,
+      "answer_preview": "Current evidence supports a high ratio of plasma to red blood cells in trauma resuscitation. Plasma transfusion is recommended as an initial intervention in most major hemorrhage protocols [1]. The PR"
+    },
+    {
+      "id": "qa_003",
+      "question": "What is the role of tranexamic acid in trauma hemorrhage?",
+      "domain": "trauma",
+      "difficulty": "medium",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.0,
+      "overall_grounding": 0.8721,
+      "answer_preview": "Tranexamic acid (TXA) is an established antifibrinolytic agent in the treatment of bleeding trauma patients [1]. TXA inhibits plasminogen activation and plasmin, thereby retarding clot disintegration "
+    },
+    {
+      "id": "qa_004",
+      "question": "What is the evidence for prehospital tranexamic acid in traumatic brain injury?",
+      "domain": "trauma",
+      "difficulty": "hard",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.0,
+      "overall_grounding": 0.8913,
+      "answer_preview": "The evidence for prehospital tranexamic acid (TXA) in traumatic brain injury (TBI) comes from several clinical trials. The STAAMP trial evaluated whether 1 gram of prehospital TXA during emergency med"
+    },
+    {
+      "id": "qa_011",
+      "question": "How does direct peritoneal resuscitation work in damage control surgery?",
+      "domain": "critical_care",
+      "difficulty": "hard",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.2857142857142857,
+      "overall_grounding": 0.8276,
+      "answer_preview": "Direct peritoneal resuscitation (DPR) is a technique used as an adjunct to damage control laparotomy (DCL) in critically ill surgical patients. In DPR, the open abdomen is continuously irrigated with "
+    },
+    {
+      "id": "qa_015",
+      "question": "What is the role of lactate in predicting traumatic coagulopathy?",
+      "domain": "critical_care",
+      "difficulty": "medium",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.16666666666666666,
+      "overall_grounding": 0.8235,
+      "answer_preview": "Lactate and base deficit serve as important predictors of traumatic coagulopathy. A study comparing the predictive value of lactate level and base deficit found both to be independent risk factors for"
+    },
+    {
+      "id": "qa_017",
+      "question": "How does prehospital intubation affect mortality in hemorrhagic shock?",
+      "domain": "emergency_medicine",
+      "difficulty": "hard",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.14285714285714285,
+      "overall_grounding": 0.8077,
+      "answer_preview": "Prehospital intubation in hemorrhagic shock after severe trauma is associated with important mortality considerations. A propensity-matched study assessed the association of intubation timing (prehosp"
+    },
+    {
+      "id": "qa_018",
+      "question": "What is the impact of the ABC-Resuscitation sequence in prehospital trauma?",
+      "domain": "emergency_medicine",
+      "difficulty": "medium",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.0,
+      "overall_grounding": 0.9036,
+      "answer_preview": "The modified ABC-Resuscitation sequence in prehospital trauma represents a shift from traditional assessment. Traditional trauma assessment follows the ABC (airway, breathing, circulation) sequence, b"
+    },
+    {
+      "id": "qa_027",
+      "question": "What is the FDA framework for AI/ML-based software as a medical device?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.14285714285714285,
+      "overall_grounding": 0.7733,
+      "answer_preview": "The FDA has developed a regulatory framework for AI/ML-based Software as a Medical Device (SaMD) through its AI/ML SaMD Action Plan [1]. The FDA's vision recognizes that AI/ML technologies have an app"
+    },
+    {
+      "id": "qa_028",
+      "question": "What are predetermined change control plans for ML-enabled medical devices?",
+      "domain": "fda_regulatory",
+      "difficulty": "medium",
+      "status": "ok",
+      "is_hallucinating": false,
+      "hallucination_rate": 0.5714285714285714,
+      "overall_grounding": 0.75,
+      "answer_preview": "Predetermined Change Control Plans (PCCPs) are a regulatory mechanism that allows manufacturers of ML-enabled medical devices to describe planned modifications and the methodology to implement them [5"
+    },
+    {
+      "id": "qa_051",
+      "question": "Tell me about quantum computing applications in cooking",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "ok",
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "overall_grounding": 0.3462,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. The provided sources cover topics related to AI/ML-based medical devices, clinical decision support software, and trauma resusci"
+    },
+    {
+      "id": "qa_052",
+      "question": "What is the best cryptocurrency to invest in right now?",
+      "domain": "out_of_domain",
+      "difficulty": "easy",
+      "status": "ok",
+      "is_hallucinating": true,
+      "hallucination_rate": 1.0,
+      "overall_grounding": 0.4583,
+      "answer_preview": "Insufficient evidence in the available sources to answer this question. The provided sources are clinical and regulatory documents related to trauma care, transfusion medicine, and medical device regu"
+    }
+  ]
+}
