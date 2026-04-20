@@ -76,6 +76,10 @@ class IngestConfig(BaseModel):
     ct_max_per_condition: int = 100
     ct_start_date_from: int | None = None
 
+    # FDA SaMD guidance
+    fda_documents: list[dict[str, Any]] = Field(default_factory=list)
+    fda_cache_dir: str = "/tmp/fda_cache"
+
     # Chunking (shared across sources)
     chunk_size: int = 200
     overlap: int = 50
@@ -144,10 +148,11 @@ def load_config(config_dir: Path | None = None) -> AppConfig:
 
 
 def _merge_ingest(raw: dict[str, Any]) -> dict[str, Any]:
-    """ingest.yaml has per-source sub-sections (pubmed, clinical_trials, chunking);
+    """ingest.yaml has per-source sub-sections (pubmed, clinical_trials, fda, chunking);
     flatten to the IngestConfig fields used by loaders."""
     pubmed = raw.get("pubmed", {})
     ct = raw.get("clinical_trials", {})
+    fda = raw.get("fda", {})
     chunking = raw.get("chunking", {})
     return {
         # PubMed
@@ -159,6 +164,9 @@ def _merge_ingest(raw: dict[str, Any]) -> dict[str, Any]:
         "ct_statuses": ct.get("statuses", []),
         "ct_max_per_condition": ct.get("max_per_condition", 100),
         "ct_start_date_from": ct.get("start_date_from"),
+        # FDA
+        "fda_documents": fda.get("documents", []),
+        "fda_cache_dir": fda.get("cache_dir", "/tmp/fda_cache"),
         # Chunking
         "chunk_size": chunking.get("chunk_size", 200),
         "overlap": chunking.get("overlap", 50),

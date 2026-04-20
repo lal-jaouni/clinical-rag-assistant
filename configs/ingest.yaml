@@ -13,11 +13,40 @@ pubmed:
   api_key: null  # Set via environment variable ENTREZ_API_KEY
 
 fda:
-  document_types:
-    - "AI/ML SaMD Guidance"
-    - "510(k) Clearance Pathways"
-    - "Pre-Cert Framework"
   cache_dir: "/tmp/fda_cache"
+  # Each entry is a PDF manifest: doc_id is the stable source_id stored in
+  # documents.source_id (unique with source_type="fda"). URLs point at the
+  # FDA's public guidance PDFs. Add local_path: <abs path> to bypass the
+  # network (useful for air-gapped runs or when FDA rotates download URLs).
+  documents:
+    - doc_id: "gmlp-2021"
+      title: "Good Machine Learning Practice for Medical Device Development: Guiding Principles"
+      doc_type: "Guiding Principles"
+      issuance_date: "2021-10-27"
+      url: "https://www.fda.gov/media/153486/download"
+    - doc_id: "aiml-samd-action-plan-2021"
+      title: "Artificial Intelligence/Machine Learning (AI/ML)-Based Software as a Medical Device (SaMD) Action Plan"
+      doc_type: "Action Plan"
+      issuance_date: "2021-01-12"
+      url: "https://www.fda.gov/media/145022/download"
+    - doc_id: "pccp-final-2024"
+      title: "Predetermined Change Control Plans for Machine Learning-Enabled Medical Devices"
+      doc_type: "Final Guidance"
+      issuance_date: "2024-12-04"
+      url: "https://www.fda.gov/media/166704/download"
+    - doc_id: "cds-final-2022"
+      title: "Clinical Decision Support Software (Final Guidance)"
+      doc_type: "Final Guidance"
+      issuance_date: "2022-09-28"
+      url: "https://www.fda.gov/media/109618/download"
+    - doc_id: "samd-clinical-evaluation-2017"
+      title: "Software as a Medical Device (SAMD): Clinical Evaluation"
+      doc_type: "Final Guidance"
+      issuance_date: "2017-12-08"
+      # Original fda.gov/media/100714/download URL 404s (FDA rotated the media
+      # ID). This regulations.gov mirror serves the same IMDRF/SaMD WG/N41
+      # FINAL:2017 PDF (verified by first-page title match).
+      url: "https://downloads.regulations.gov/FDA-2016-D-2483-0021/attachment_1.pdf"
 
 clinical_trials:
   # CT.gov v2 API condition queries. These are matched via query.cond=, which

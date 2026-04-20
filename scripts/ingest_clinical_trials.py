@@ -247,17 +247,23 @@ def verify_ingestion() -> None:
         print(f"CT.gov documents in DB: {ct_docs}")
         print(f"CT.gov chunks in DB:    {ct_chunks}")
 
-        # Status distribution
-        status_counts = (
-            session.query(Document.meta["status"].as_string(), func.count(Document.id))
+        # Status distribution -- aggregated in Python to sidestep a Postgres
+        # quirk where two separate CAST(metadata ->> 'status' AS VARCHAR)
+        # expressions emitted by SQLAlchemy's ORM are treated as non-equal
+        # in the GROUP BY clause (GroupingError). Fine for verification code.
+        status_rows = (
+            session.query(Document.meta)
             .filter(Document.source_type == SOURCE_TYPE)
-            .group_by(Document.meta["status"].as_string())
             .all()
         )
+        status_counts: dict[str, int] = {}
+        for (meta,) in status_rows:
+            status = (meta or {}).get("status") or ""
+            status_counts[status] = status_counts.get(status, 0) + 1
         if status_counts:
             print()
             print("By overall status:")
-            for status, count in status_counts:
+            for status, count in sorted(status_counts.items(), key=lambda kv: -kv[1]):
                 print(f"  {status or '(blank)'}: {count}")
 
         year_dist = (
