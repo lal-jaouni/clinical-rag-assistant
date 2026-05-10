@@ -78,13 +78,13 @@ Clinical RAG Phase 1 health check
 
 If any check fails, the error message tells you what to fix.
 
-### 7. (Optional) Switch to Claude or another API LLM
+### 7. (Optional) Switch to an API LLM
 
 Edit `.env`:
 
 ```bash
 LLM_PROVIDER=anthropic
-LLM_MODEL=anthropic/claude-3-5-sonnet-20241022
+LLM_MODEL=openai/gpt-4o
 ANTHROPIC_API_KEY=sk-ant-...
 ```
 

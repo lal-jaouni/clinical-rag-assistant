@@ -1,5 +1,5 @@
 {
-  "model": "claude-opus-4-6",
+  "model": "baseline-llm",
   "timestamp": "2026-04-17 11:01:23",
   "avg_confidence": 0.768,
   "avg_grounding": 0.655,

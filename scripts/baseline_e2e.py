@@ -1,10 +1,10 @@
-"""Claude Opus 4.6 baseline evaluation: retrieval + safety + formatting.
+"""Baseline LLM evaluation: retrieval + safety + formatting.
 
-Instead of calling Claude via API, this script:
+Instead of calling an external LLM via API, this script:
 1. Retrieves chunks from the live DB (real retrieval)
 2. Builds the full prompt (real prompt templates)
-3. Writes the prompt to a file for Claude to answer inline
-4. Reads Claude's pre-generated answers from a JSON file
+3. Writes the prompt to a file for the LLM to answer inline
+4. Reads pre-generated answers from a JSON file
 5. Runs safety guardrails + output formatting (real safety pipeline)
 
 This isolates retrieval quality and safety system behavior with a
@@ -12,12 +12,12 @@ known-good LLM baseline.
 
 Usage:
     # Step 1: Generate prompts
-    .venv/bin/python scripts/claude_baseline_e2e.py --generate-prompts
+    .venv/bin/python scripts/baseline_e2e.py --generate-prompts
 
-    # Step 2: (Claude answers are filled in by the agent)
+    # Step 2: (Baseline answers are filled in by the agent)
 
     # Step 3: Evaluate answers
-    .venv/bin/python scripts/claude_baseline_e2e.py --evaluate
+    .venv/bin/python scripts/baseline_e2e.py --evaluate
 """
 
 import json
@@ -117,7 +117,7 @@ def generate_prompts():
             "chunks": chunks,
             "system_prompt": SYSTEM_PROMPT,
             "user_prompt": user_prompt,
-            "claude_answer": "",  # To be filled in
+            "baseline_answer": "",  # To be filled in
         })
 
     # Save prompts
@@ -142,8 +142,8 @@ def generate_prompts():
 
 
 def evaluate_answers():
-    """Run safety guardrails on Claude's answers."""
-    answers_path = os.path.join(BASELINE_DIR, "claude_answers.json")
+    """Run safety guardrails on baseline LLM answers."""
+    answers_path = os.path.join(BASELINE_DIR, "baseline_answers.json")
     if not os.path.exists(answers_path):
         print(f"ERROR: {answers_path} not found. Generate it first.")
         sys.exit(1)
@@ -162,12 +162,12 @@ def evaluate_answers():
 
     results = []
     print("="*70)
-    print("  CLAUDE OPUS 4.6 BASELINE EVALUATION")
+    print("  BASELINE LLM EVALUATION")
     print("="*70)
 
     for entry in answers_data:
         query = entry["query"]
-        answer = entry["claude_answer"]
+        answer = entry["baseline_answer"]
         chunks = entry["chunks"]
 
         print(f"\n--- Query {entry['query_index']}: {query}")
@@ -182,7 +182,7 @@ def evaluate_answers():
             confidence=safety.confidence,
             grounding_score=safety.grounding_score,
             latency_ms=0,
-            model="claude-opus-4-6",
+            model="baseline-llm",
             is_safe=safety.is_safe,
             override_reason=safety.override_reason,
         )
@@ -228,7 +228,7 @@ def evaluate_answers():
     eval_path = os.path.join(BASELINE_DIR, "baseline_results.json")
     with open(eval_path, "w") as f:
         json.dump({
-            "model": "claude-opus-4-6",
+            "model": "baseline-llm",
             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
             "avg_confidence": round(avg_conf, 3),
             "avg_grounding": round(avg_ground, 3),

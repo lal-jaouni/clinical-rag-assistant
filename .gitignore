@@ -14,3 +14,7 @@ mlruns/
 *.db
 logs/
 .pytest_cache/
+
+# Project config
+CLAUDE.md
+.claude/

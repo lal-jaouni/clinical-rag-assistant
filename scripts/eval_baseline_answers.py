@@ -1,7 +1,7 @@
-"""Evaluate Claude-generated answers against the RAG evaluation metrics.
+"""Evaluate Baseline LLM answers against the RAG evaluation metrics.
 
 Reads retrieved chunks from data/eval_retrieval.json, uses pre-generated
-Claude answers, and runs RAGAS + hallucination detection.
+Baseline answers, and runs RAGAS + hallucination detection.
 """
 
 import json
@@ -16,8 +16,8 @@ from evaluate.clinical_qa_set import ClinicalQASet
 from evaluate.hallucination_detector import HallucinationDetector
 from evaluate.ragas_metrics import RAGASEvaluator
 
-# Claude's answers for 12 sampled questions (2 per domain)
-CLAUDE_ANSWERS = {
+# baseline LLM answers for 12 sampled questions (2 per domain)
+BASELINE_ANSWERS = {
     "qa_001": (
         "Massive transfusion protocol (MTP) is activated when a patient requires "
         "more than 10 units of packed red blood cells within 24 hours, which is the "
@@ -179,7 +179,7 @@ CLAUDE_ANSWERS = {
 
 def main():
     print("=" * 60)
-    print("  CLAUDE EVALUATION (in-conversation answers)")
+    print("  BASELINE EVALUATION (in-conversation answers)")
     print("=" * 60)
 
     # Load retrieval data for chunk texts
@@ -204,7 +204,7 @@ def main():
 
     t_start = time.perf_counter()
 
-    for i, (qa_id, answer_text) in enumerate(CLAUDE_ANSWERS.items()):
+    for i, (qa_id, answer_text) in enumerate(BASELINE_ANSWERS.items()):
         pair = pairs_by_id.get(qa_id)
         if not pair:
             print(f"  WARNING: {qa_id} not found in retrieval data")
@@ -216,7 +216,7 @@ def main():
         difficulty = pair.get("difficulty", "medium")
         source_texts = [c["text"] for c in pair.get("retrieved_chunks", [])]
 
-        print(f"  [{i+1}/{len(CLAUDE_ANSWERS)}] {qa_id} ({domain_tag}/{difficulty}): {q[:80]}...")
+        print(f"  [{i+1}/{len(BASELINE_ANSWERS)}] {qa_id} ({domain_tag}/{difficulty}): {q[:80]}...")
 
         questions.append(q)
         answers.append(answer_text)
@@ -261,10 +261,10 @@ def main():
     halluc_rate = hallucination.get_hallucination_rate()
 
     report = {
-        "model": "claude-opus-4-6-in-conversation",
+        "model": "baseline-llm-in-conversation",
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
         "total_time_s": round(total_time, 2),
-        "num_questions": len(CLAUDE_ANSWERS),
+        "num_questions": len(BASELINE_ANSWERS),
         "num_answered": len(per_question_results),
         "ragas": ragas_scores,
         "hallucination_rate": round(halluc_rate, 4),
@@ -273,7 +273,7 @@ def main():
     }
 
     # Save reports
-    out_dir = Path(os.path.dirname(__file__)) / ".." / "metrics" / "claude_opus_in_conversation"
+    out_dir = Path(os.path.dirname(__file__)) / ".." / "metrics" / "baseline_in_conversation"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     report_path = out_dir / "eval_report.json"
@@ -284,8 +284,8 @@ def main():
     hallucination.save_report(out_dir / "hallucination_report.json")
 
     # Summary
-    print(f"\n  === CLAUDE EVALUATION SUMMARY ===")
-    print(f"  Questions: {len(CLAUDE_ANSWERS)} | Answered: {len(per_question_results)}")
+    print(f"\n  === BASELINE EVALUATION SUMMARY ===")
+    print(f"  Questions: {len(BASELINE_ANSWERS)} | Answered: {len(per_question_results)}")
     print(f"  Hallucination rate: {halluc_rate:.2%} (target: <2%)")
     print(f"  Faithfulness: {ragas_scores['faithfulness']:.4f}")
     print(f"  Answer relevance: {ragas_scores['answer_relevance']:.4f}")

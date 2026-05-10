@@ -321,7 +321,7 @@ def main():
         "--model",
         type=str,
         default="ollama/llama3.1:8b",
-        help="LLM model string (e.g., ollama/llama3.1:8b, anthropic/claude-sonnet-4-20250514)",
+        help="LLM model string (e.g., ollama/llama3.1:8b, openai/gpt-4o)",
     )
     parser.add_argument(
         "--max-tokens",

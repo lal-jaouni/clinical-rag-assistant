@@ -8,7 +8,7 @@ llm:
   # LiteLLM-format model string. Examples:
   #   ollama/llama3.1:8b                       (default, self-hosted)
   #   ollama/granite3.1-dense:2b               (lightweight fallback)
-  #   anthropic/claude-3-5-sonnet-20241022     (requires ANTHROPIC_API_KEY)
+  #   openai/gpt-4o     (requires ANTHROPIC_API_KEY)
   #   openai/gpt-4o-mini                       (requires OPENAI_API_KEY)
   #   groq/llama-3.1-70b-versatile             (requires GROQ_API_KEY)
   # Override via LLM_MODEL env var in .env.

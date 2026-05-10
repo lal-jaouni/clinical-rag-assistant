@@ -1,6 +1,6 @@
 """LiteLLM-backed LLM client: unified interface for Ollama, Anthropic, OpenAI, Groq, etc.
 
-The model string (e.g., ``"ollama/llama3.1:8b"``, ``"anthropic/claude-3-5-sonnet-20241022"``,
+The model string (e.g., ``"ollama/llama3.1:8b"``, ``"openai/gpt-4o"``,
 ``"openai/gpt-4o-mini"``) tells LiteLLM which provider to route to. API keys come
 from environment variables (ANTHROPIC_API_KEY, OPENAI_API_KEY, etc.).
 

@@ -28,7 +28,7 @@ class EmbeddingConfig(BaseModel):
 
 
 class LLMConfig(BaseModel):
-    # LiteLLM-format model string: "ollama/llama3.1:8b", "anthropic/claude-3-5-sonnet-20241022", etc.
+    # LiteLLM-format model string: "ollama/llama3.1:8b", "openai/gpt-4o", etc.
     # Env var LLM_MODEL overrides this.
     model: str = "ollama/llama3.1:8b"
     temperature: float = 0.1

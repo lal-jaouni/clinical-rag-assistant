@@ -1,5 +1,5 @@
 {
-  "model": "claude-opus-4-6-in-conversation",
+  "model": "baseline-llm-in-conversation",
   "timestamp": "2026-04-17T12:23:07",
   "total_time_s": 0.0,
   "num_questions": 12,
